@@ -14,4 +14,3 @@ Eva Šrámková, website.com
 Anders Butzbach, www.kviksoft.com
 Lars Svendsen, website.com
 Vigan Shemsiu, www.shemsiu.dk
-
