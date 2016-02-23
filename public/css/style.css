@@ -1,0 +1,94 @@
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                
+                
+                font-weight: 100;
+                font-family: 'Lato';
+            }
+
+			#header {
+				
+				height: 90px;
+				width: 80%;
+				display: block;
+				margin-left: auto;
+  				margin-right: auto;
+				}
+				
+            .container {
+                width: 80%;				
+				margin-left: auto;
+  				margin-right: auto;               
+				display: block;
+            	}
+			
+			.logo {
+				height: 80px;
+				width: 80px;
+				
+				margin-right: 10px;
+				margin-top: 10px;
+				background-color:#0E6010;
+				text-align:center;
+				color: #FFFFFF;		
+				}
+				
+			.map {
+				width: 100%;
+				height: 200px;
+				background-color: #1383aF; /*test */
+				color: #FFFFFF;
+				
+				}
+				
+			.video {
+				width: 59%;
+				height: 200px;
+				background-color: #215C27;
+				float:left;
+				color: #FFFFFF;
+				}	
+				
+			.signup {
+				width: 40%;
+				height: 200px;
+				background-color: #0D5519;
+				float:right;
+				color: #FFFFFF;
+				}
+			
+			.news {
+				width: 100%;
+				margin-top: 
+				height: 200px;
+				background-color: #07430C;
+				float:left;
+				
+				color: #FFFFFF;
+				}	
+
+			footer {
+				width: 100%;
+				float: left;
+				}
+				
+            .content {
+                text-align: center;
+                display: inline-block;
+				
+            }
+
+            .title {
+                font-size: 96px;
+            }
+			
+			nav {
+				display:inline-block;
+				float:right;
+				margin-top: -20px;
+				}
