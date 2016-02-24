@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index', function () {
+Route::get('frontpage', function () {
     return view('pages.index');
+});
+
+Route::get('map', function () {
+    return view('pages.map');
 });
 
 /*
