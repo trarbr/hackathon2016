@@ -40,68 +40,69 @@
                 
         <script type="text/javascript">
                
-
+            // GEO LOCATIONS   
+            var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
+            var paperGeo = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
             
             var map;
             function initMap() {
-              var myLatLng = "55.402403, -10.385522";
-              
-              var myLatLng2 = "55.404766, -10.400160";
-              
-              //Pictures
-              var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
-              var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png'; 
-              var charityPic = 'images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
-              var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
-              var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
-              var glassPic = 'images/glass_resized.png';
-              
-              
-              
-              var contentString = '<div id="content">'+
-                '<div id="siteNotice">'+
-                    '</div>'+
-                        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-                        '<div id="bodyContent">'+
-                        '<p>Blah blah blah </p>'+
-                    '</div>'+
-                '</div>';
+                var myLatLng = "55.402403, -10.385522";
+
+                var myLatLng2 = "55.404766, -10.400160";
+
+                //Pictures
+                var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
+                var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png'; 
+                var charityPic = 'images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
+                var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
+                var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
+                var glassPic = 'images/glass_resized.png';
+
+
+
+                var contentString = '<div id="content">'+
+                  '<div id="siteNotice">'+
+                      '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>Blah blah blah </p>'+
+                      '</div>'+
+                  '</div>';
       
       
-              map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 55.402403, lng: 10.385522},
-                zoom: 13
+                map = new google.maps.Map(document.getElementById('map'), {
+                  center: {lat: 55.402403, lng: 10.385522},
+                  zoom: 13
+
+                });
                 
-              });
-            
-            function generalWasteFunc() {
-                var generalWaste = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
-                var marker, i;
-                for (i = 0; i < generalWaste.length; i++) {  
-                  marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(generalWaste[i][0], generalWaste[i][1]),
-                    map: map,
-                    icon: generalWastePic
-                  });
+                function generalWasteFunc() {
+                    var marker, i;
+                    for (i = 0; i < generalWasteGeo.length; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(generalWasteGeo[i][0], generalWasteGeo[i][1]),
+                        map: map,
+                        icon: generalWastePic
+                      });
+                    }
                 }
-            }
             
             
-            function paperFunc() {
-                var paper = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
-                var marker, i;
-                for (i = 0; i < paper.length; i++) {  
-                  marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(paper[i][0], paper[i][1]),
-                    map: map,
-                    icon: paperPic
-                  });
+                function paperFunc() {
+                    
+                    var marker, i;
+                    for (i = 0; i < paperGeo.length; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(paperGeo[i][0], paperGeo[i][1]),
+                        map: map,
+                        icon: paperPic
+                      });
+                    }
                 }
-            }
             
-            //generalWasteFunc();
+            generalWasteFunc();
             
-            //paperFunc();
+            paperFunc();
             
               
             
