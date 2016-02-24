@@ -38,7 +38,7 @@
                 </ul>
             </div>
                 
-            <script type="text/javascript">
+        <script type="text/javascript">
                
 
             
@@ -104,33 +104,14 @@
             //paperFunc();
             
               
-            var marker1 = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
-            });
             
-            var marker2 = new google.maps.Marker({
-                position: myLatLng2,
-                map: map,
-                title: 'Østersvinet',
-                icon: flasker
-            });
             
+            
+            /* INFO WINDOW
             var infowindow = new google.maps.InfoWindow({
             content: contentString
             });
-            
-            
-
-
-            /* var flaskemarker = new google.maps.Marker({
-              position: 55.398507, 10.383704,
-              map: map,
-              icon: flasker
-            }); */
-          
-            
+            */
             
             //document.getElementById("generalWaste").addListener("click", fisk());
         
