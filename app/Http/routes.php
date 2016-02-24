@@ -19,6 +19,10 @@ Route::get('index', function () {
     return view('pages.index');
 });
 
+
+Route::post('/subscribe', 'NewsletterController@subscribe');
+Route::get('/unsubscribe/{email}', 'NewsletterController@unsubscribe');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
