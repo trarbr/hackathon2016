@@ -35,8 +35,9 @@
               
               var myLatLng2 = "55.404766, -10.400160";
               
-              var flasker = 'https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/circle-check-128.png';
-              
+              //Pictures
+              var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
+              var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png'; 
               
               var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
@@ -53,17 +54,35 @@
                 zoom: 13
               });
             
-            
-            var generalWaste = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
-            var marker, i;
-            for (i = 0; i < generalWaste.length; i++) {  
-              marker = new google.maps.Marker({
-                position: new google.maps.LatLng(generalWaste[i][0], generalWaste[i][1]),
-                map: map,
-                icon: flasker
-              });
+            function generalWasteFunc() {
+                var generalWaste = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
+                var marker, i;
+                for (i = 0; i < generalWaste.length; i++) {  
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(generalWaste[i][0], generalWaste[i][1]),
+                    map: map,
+                    icon: generalWastePic
+                  });
+                }
             }
-                
+            
+            
+            function paperFunc() {
+                var paper = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
+                var marker, i;
+                for (i = 0; i < paper.length; i++) {  
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(paper[i][0], paper[i][1]),
+                    map: map,
+                    icon: paperPic
+                  });
+                }
+            }
+            
+            generalWasteFunc();
+            
+            paperFunc();
+            
               
             var marker1 = new google.maps.Marker({
                 position: myLatLng,
