@@ -11,16 +11,9 @@ use Illuminate\Support\Facades\Mail;
 
 class ReminderController extends Controller
 {
-    public function __construct()
-    {
-
-    }
-
     public function daily_notify()
     {
-        $subscriptions = Newsletter::where('active', true)->get();
-
-        foreach($subscriptions as $subscription) {
+        foreach(Newsletter::where('active', true)->get() as $subscription) {
             $this->send_notification($subscription->email);
         }
     }
