@@ -45,6 +45,8 @@ class NewsletterController extends Controller
         $user = Newsletter::where('email', $email)->first();
         $user->active = false;
         $user->save();
+
+
     }
 
     private function subscribe_again($request)
@@ -60,7 +62,6 @@ class NewsletterController extends Controller
 
         $user->save();
     }
-    //Remove from the mailing list (only change the active field from true to false)
     //Send newsletter to the mailing list where "active" is true
     //More coming
 }
