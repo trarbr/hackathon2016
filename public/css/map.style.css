@@ -3,9 +3,25 @@
 	height: 400px;
 	}
         
-#mapnav {
+#mapnavcont {
     width: 100%;
     height: 80px;
-    background-color: blue;
-    top: -80px;
+    background-color: red;
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: right;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    
 }

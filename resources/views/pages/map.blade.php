@@ -6,6 +6,9 @@
         <link rel="stylesheet" type="text/css" href="/css/map.style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <meta charset="utf-8">
+        
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        
     </head>
 
 
@@ -23,15 +26,22 @@
         
         <!-- Her er hovedindhold til forsiden -->
         <container class="container">
-            <div id="map">
-                
+            <div id="map">    
             </div>
             
             <div id="mapnavcont"> 
+                <ul>
+                    <li>
+                        <button id="generalWaste">General Waste</button>
+                    </li>
+                    
+                </ul>
             </div>
-            
+                
             <script type="text/javascript">
+               
 
+            
             var map;
             function initMap() {
               var myLatLng = "55.402403, -10.385522";
@@ -61,6 +71,7 @@
               map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 55.402403, lng: 10.385522},
                 zoom: 13
+                
               });
             
             function generalWasteFunc() {
@@ -88,9 +99,9 @@
                 }
             }
             
-            generalWasteFunc();
+            //generalWasteFunc();
             
-            paperFunc();
+            //paperFunc();
             
               
             var marker1 = new google.maps.Marker({
@@ -118,17 +129,17 @@
               map: map,
               icon: flasker
             }); */
+          
             
-            flaskemarker.addListener('click', function() {
-                infowindow.open(map, flaskemarker);
-              });
-            }
-
+            
+            //document.getElementById("generalWaste").addListener("click", fisk());
+        
+            }    
         </script>
         <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgNgm0F35m5uI_elKUjTAWpHVaFHb_KA&callback=initMap">
         </script>
-            
+        
            
             <div class="video">SPACE FOR VIDEO
             </div>
