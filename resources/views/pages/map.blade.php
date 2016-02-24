@@ -27,6 +27,9 @@
                 
             </div>
             
+            <div id="mapnavcont"> 
+            </div>
+            
             <script type="text/javascript">
 
             var map;
@@ -38,6 +41,12 @@
               //Pictures
               var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
               var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png'; 
+              var charityPic = 'images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
+              var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
+              var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
+              var glassPic = 'images/glass_resized.png';
+              
+              
               
               var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
