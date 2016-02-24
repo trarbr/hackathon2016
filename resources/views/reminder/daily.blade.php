@@ -5,7 +5,7 @@
     <title>Daily notify</title>
 </head>
 <body>
-<strong>{{ $email }}</strong>
+<strong>Hi {{ $email }},</strong>
 <br /><br />
 Remember to put your trash can near the road!
 </body>
