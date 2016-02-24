@@ -1,0 +1,1 @@
+Daily notify ... {{ $email }}
