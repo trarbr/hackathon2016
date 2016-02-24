@@ -106,14 +106,14 @@
               
             
             
-            
+            --------------------------------------------------------
             /* INFO WINDOW
             var infowindow = new google.maps.InfoWindow({
             content: contentString
             });
             */
+            -----------------------------------------------------------
             
-            //document.getElementById("generalWaste").addListener("click", fisk());
         
             }    
         </script>
