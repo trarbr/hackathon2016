@@ -76,7 +76,4 @@ class NewsletterController extends Controller
             $message->to($email);
         });
     }
-
-
-    //Send newsletter to the mailing list where "active" is true
 }
