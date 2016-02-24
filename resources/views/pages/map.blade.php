@@ -31,9 +31,9 @@
 
             var map;
             function initMap() {
-              var myLatLng = {lat: 55.402403, lng: 10.385522};
+              var myLatLng = "55.402403, -10.385522";
               
-              var myLatLng2 = {lat: 55.404766, lng: 10.400160};
+              var myLatLng2 = "55.404766, -10.400160";
               
               var flasker = 'https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/circle-check-128.png';
               
@@ -52,7 +52,18 @@
                 center: {lat: 55.402403, lng: 10.385522},
                 zoom: 13
               });
-              
+            
+            
+            var generalWaste = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
+            var marker, i;
+            for (i = 0; i < generalWaste.length; i++) {  
+              marker = new google.maps.Marker({
+                position: new google.maps.LatLng(generalWaste[i][0], generalWaste[i][1]),
+                map: map,
+                icon: flasker
+              });
+            }
+                
               
             var marker1 = new google.maps.Marker({
                 position: myLatLng,
@@ -71,11 +82,14 @@
             content: contentString
             });
             
-            var flaskemarker = new google.maps.Marker({
-              position: {lat: 55.398507, lng: 10.383704},
+            
+
+
+            /* var flaskemarker = new google.maps.Marker({
+              position: 55.398507, 10.383704,
               map: map,
               icon: flasker
-            });
+            }); */
             
             flaskemarker.addListener('click', function() {
                 infowindow.open(map, flaskemarker);
@@ -87,13 +101,7 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgNgm0F35m5uI_elKUjTAWpHVaFHb_KA&callback=initMap">
         </script>
             
-            
-            
-            
-            
-            
-            
-            
+           
             <div class="video">SPACE FOR VIDEO
             </div>
             <div class="signup">SPACE FOR SIGNUP
