@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Daily notify</title>
 </head>
 <body>
-
+<strong>{{ $email }}</strong>
+<br /><br />
+Remember to put your trash can near the road!
 </body>
 </html>
-
-Daily notify ... {{ $email }}
