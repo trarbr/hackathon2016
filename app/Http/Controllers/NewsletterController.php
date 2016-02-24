@@ -62,6 +62,8 @@ class NewsletterController extends Controller
 
         $user->save();
     }
+
+    //Send mail to the user when they subscribe and when they leave our mailing list!
     //Send newsletter to the mailing list where "active" is true
     //More coming
 }
