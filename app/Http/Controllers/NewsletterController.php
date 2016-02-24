@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Mockery\CountValidator\Exception;
 
 class NewsletterController extends Controller
@@ -31,12 +32,13 @@ class NewsletterController extends Controller
                     'mobile' => $request->mobile,
                     'notification_type' => $request->notification_type
                 ]);
+                $this->send_notification($request->email, 'newsletter.subscribe');
                 return "Fint!";
             } catch (\Exception $e) {
                 return "Der er opstået en fejl!";
             }
         } else {
-            return $this->subscribe_again($request);
+            return $this->subscribe_update($request);
         }
     }
 
@@ -46,10 +48,12 @@ class NewsletterController extends Controller
         $user->active = false;
         $user->save();
 
+        $this->send_notification($email, 'newsletter.unsubscribe');
+
 
     }
 
-    private function subscribe_again($request)
+    private function subscribe_update($request)
     {
         $user = Newsletter::where('email', $request->email)->first();
 
@@ -61,9 +65,18 @@ class NewsletterController extends Controller
         $user->active = true;
 
         $user->save();
+
+        $this->send_notification($user->email, 'newsletter.subscribe_update');
     }
 
-    //Send mail to the user when they subscribe and when they leave our mailing list!
+    private function send_notification($email, $view)
+    {
+        Mail::send($view, ['email' => $email], function($message) use ($email) {
+            $message->from('noreply@shemsiu.dk');
+            $message->to($email);
+        });
+    }
+
+
     //Send newsletter to the mailing list where "active" is true
-    //More coming
 }
