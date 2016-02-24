@@ -1,5 +1,5 @@
 # Trash and Charity (TAC)
-One week school project!
+One week hackathon project! TAC is all about distributing information about how to get rid of trash. 
 
 # Test it
 (Link til production page)
@@ -14,7 +14,7 @@ Kim Pedersen, website.com
 
 Eva Šrámková, website.com
 
-Anders Butzbach, www.kviksoft.com
+Anders Butzbach Christensen, anders@chally.me
 
 Lars Svendsen, website.com
 
