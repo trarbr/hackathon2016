@@ -15,11 +15,6 @@ use Mockery\CountValidator\Exception;
 
 class NewsletterController extends Controller
 {
-    public function __construct()
-    {
-
-    }
-
     public function subscribe(Request $request)
     {
         $user = Newsletter::where('email', $request->email)->first();
@@ -49,8 +44,6 @@ class NewsletterController extends Controller
         $user->save();
 
         $this->send_notification($email, 'newsletter.unsubscribe');
-
-
     }
 
     private function subscribe_update($request)
