@@ -146,6 +146,38 @@
                 });
             });
         });
+
+
+
+
+
+
+
+
+
+
+
+
+        $.ajax({
+            url: '/news/create',
+            type: 'post',
+            data: {
+                title: title,
+                iconDisplayBackground: iconDisplayBackground,
+                iconDisplay: iconDisplay,
+                date: date,
+                time: time,
+                body: body,
+                _token: token
+            },
+            success: function (data) {
+                $('#rowPage').slideUp(500);
+                $('#successPage').removeClass('hidden');
+
+            }, error: function (data) {
+                var error = JSON.parse(data.responseText);
+                console.log(error);
+            }
     });
 </script>
 </body>
