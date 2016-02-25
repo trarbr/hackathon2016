@@ -5,12 +5,12 @@ An innovative web-app that benefits people living in Odense:
 
 
 ##Group members
-*Verdes Andrei, website.com
-*Kim Pedersen, website.com
-*Eva Šrámková, website.com
-*Anders Butzbach Christensen, anders@chally.me
-*Lars Svendsen, website.com
-*Vigan Shemsiu, www.shemsiu.dk
+* Verdes Andrei, website.com
+* Kim Pedersen, website.com
+* Eva Šrámková, website.com
+* Anders Butzbach Christensen, anders@chally.me
+* Lars Svendsen, website.com
+* Vigan Shemsiu, www.shemsiu.dk
 
 
 ##How might we help people living in Odense?
@@ -55,7 +55,7 @@ charities will get more goods, because there are more people using the 'clothes'
 	* Community-wise - organization of cleaning events
 
 ##How it's made
-*Laravel framework
+* Laravel framework
 
 
 # Test it
