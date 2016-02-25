@@ -10,8 +10,8 @@
 * Kin Pedersen
 * Eva Sramkova
 * Anders Butzbach Christensen, anders@chally.me
-* Lars Svendsen
-* Vigan Shemsiu, www.shemsiu.dk, info@shemsiu.dk
+* Lars Svendsen, lars@svndsn.dk
+* Vigan Shemsiu, info@shemsiu.dk
 
 ##How might we help people living in Odense?
 We find a problem and solve it.
