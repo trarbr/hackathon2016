@@ -30,16 +30,20 @@ a {
 button {
     background-color: transparent;
     border: none;
+    padding-right: 10px;
 }
 
 button img {
-    height: 40px;
+    height: 35px;
     width: auto;
     padding: 10px;
 }
 
 button p {
+    float: right;
     font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    margin-top: 27px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Abel);

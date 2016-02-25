@@ -40,72 +40,72 @@
                     <li>
                         <button id="generalWaste" onclick="mdamGenWaste()">
                             <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste"> 
-                            <p> General Waste </p>
+                            <p>general Waste </p>
                         </button>
                         <button id="generalWaste2" onclick="mdamGenWaste2()">
                             <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste"> 
-                            General Waste
+                            <p>general Waste </p>
                         </button>
                     </li>
                     <li>
                         <button id="paper" onclick="mdamPaper()">
                             <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper"> 
-                            Paper
+                            <p>paper</p>
                         </button>
                         <button id="paper2" onclick="mdamPaper2()">
                             <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper"> 
-                            Paper
+                            <p>paper</p>
                         </button>
                     </li>
                     <li>
                         <button id="pant" onclick="mdamPant()">
                             <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
-                            Pant
+                            <p>pant</p>
                         </button>
                         <button id="pant2" onclick="mdamPant2()">
                             <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
-                            Pant
+                            <p>pant</p>
                         </button>
                     </li>
                     <li>
                         <button id="glass" onclick="mdamGlass()">
                             <img src="images/glass.png" alt="On/off Glass">
-                            Glass
+                            <p>glass</p>
                         </button>
                         <button id="glass2" onclick="mdamGlass2()">
                             <img src="images/glass.png" alt="On/off Glass">
-                            Glass
+                            <p>glass</p>
                         </button>
                     </li>
                     <li>
                         <button id="batteries" onclick="mdamBatteries()">
                             <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
-                            Batteries
+                            <p>batteries</p>
                         </button>
                         <button id="batteries2" onclick="mdamBatteries2()">
                             <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
-                            Batteries
+                            <p>batteries</p>
                         </button>
                     </li>
                     <li>
                         <button id="charity" onclick="mdamCharity()">
                             <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
-                            charity
+                            <p>charity</p>
                         </button>
                         <button id="charity2" onclick="mdamCharity2()">
                             <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
-                            charity
+                            <p>charity</p>
                         </button>
                     </li>
                     
                     <li>
                         <button id="sechand" onclick="mdamSechand()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
-                            2. Hand Stores
+                            <p>2. hand stores</p>
                         </button>
                         <button id="sechand2" onclick="mdamSechand2()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
-                            2. Hand Stores
+                            <p>2. hand stores</p>
                         </button>
                     </li>
                     
