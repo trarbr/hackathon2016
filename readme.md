@@ -1,17 +1,17 @@
-An innovative web-app that benefits people living in Odense:
+##An innovative web-app that benefits people living in Odense:
+
 #Trash and Charity (TAC)
 	One week hackathon project!
 	TAC is all about distributing information about how to get rid of trash. 
 
-
 ##Group members
-* Verdes Andrei, website.com
-* Kim Pedersen, website.com
-* Eva Šrámková, website.com
-* Anders Butzbach Christensen, anders@chally.me
-* Lars Svendsen, website.com
-* Vigan Shemsiu, www.shemsiu.dk
 
+* Andrei Verdes
+* Kin Pedersen
+* Eva Sramkova
+* Anders Butzbach Christensen, anders@chally.me
+* Lars Svendsen
+* Vigan Shemsiu, www.shemsiu.dk
 
 ##How might we help people living in Odense?
 We find a problem and solve it.
@@ -39,14 +39,17 @@ The recycling rate will increase,
 the city will become even more environment friendly,
 charities will get more goods, because there are more people using the 'clothes' bins.
 
+
 ##What features will achieve the desired outcomes?
-* Must have
-	* Map (google maps)
-		* input field for the desired street name to be shown on the map
-		* markers representing all kinds of bins in the desired area
-		* legend on the map explaining the bins
-	* Sign up form for reminders to bring the bin out (newsletter function)
+
+* Must-have
+	* Map (google)
+	* input field for the desired street name to be shown on the map
+	* markers representing all kinds of bins in the desired areas
+	* Sign up form for reminders to bring the bin out (newsletter)
 	* Database
+	* Text and pictures for the News section
+	* Logo
 
 * Nice to have
 	* Database connected with the map
@@ -55,10 +58,5 @@ charities will get more goods, because there are more people using the 'clothes'
 	* Community-wise - organization of cleaning events
 
 ##How it's made
-* Laravel framework
-
 
 # Test it
-
-
-
