@@ -9,8 +9,13 @@
 }
 
 .navbar-default {
-    height: 100px;
-    padding-top: 20px;
+    background: #5bc0de;
+    height: 130px;
+    padding-top: 40px;
+}
+.navbar-default .navbar-brand {
+    font-size: 30px;
+    color: black;
 }
 
 .overlay {
@@ -22,9 +27,10 @@
     margin-top:-480px;
 }
 
+
 .welcome {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .container-fluid-full {
     width: 100%;
@@ -48,6 +54,12 @@
 
 .newsletter {
     background: #eee;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+footer {
+    background: #ddd;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

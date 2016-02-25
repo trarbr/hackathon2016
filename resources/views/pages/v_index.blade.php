@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Trash & Charity</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -72,7 +72,7 @@
 <div class="newsletter">
     <div class="container">
         <div class="col-xs-12 col-md-6">
-            <img src="http://www.slate.com/content/dam/slate/articles/health_and_science/science/2015/07/150730_SCI_Cecil_lion.jpg.CROP.promo-xlarge2.jpg"
+            <img src="/images/recycle.png"
                  class="img-responsive"/>
         </div>
         <div class="col-xs-12 col-md-6">
@@ -98,28 +98,47 @@
                         <option value="all">Both</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success container-fluid-full">Submit</button>
+                <button type="submit" class="btn btn-success container-fluid-full btn-lg">Submit</button>
             </form>
         </div>
     </div>
 </div>
 
+<footer>
+    <div class="container text-center" id="unsubscribe-hidden">
+        <p id="unsubscribe-msg"></p>
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+        <form role="form" class="form-inline">
+            <div class="form-group">
+                <input type="text" placeholder="Your e-mail" class="form-control" id="btn-unsubscribe-field">
+                <a class="btn btn-success btn-sm" id="btn-unsubscribe-go">Unsubscribe</a>
+            </div>
+        </form>
+        <br/><br/>
+    </div>
+    <div class="container text-center">
+        &copy; <?php echo date('Y'); ?> Copyright Trash & Charity
+        <a class="btn btn-info btn-xs pull-right" id="btn-unsubscribe-open">Unsubscribe</a>
+    </div>
+</footer>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
+
+<script type="text/javascript">
+    $(function ($) {
+        $("#unsubscribe-hidden").toggle('hidden');
+
+        $("#btn-unsubscribe-open").click(function () {
+            $("#unsubscribe-hidden").toggle('hidden');
+
+            $("#btn-unsubscribe-go").click(function () {
+               
+            });
+        });
+    });
+</script>
 </body>
 </html>
