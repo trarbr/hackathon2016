@@ -58,6 +58,14 @@
                         <button id="charity" onclick="mdamCharity()">charity</button>
                         <button id="charity2" onclick="mdamCharity2()">charity2</button>
                     </li>
+                    <li>
+                        <button id="charity" onclick="mdamCharity()">charity</button>
+                        <button id="charity2" onclick="mdamCharity2()">charity2</button>
+                    </li>
+                    <li>
+                        <button id="sechand" onclick="mdamSechand()">2. Hand Stores</button>
+                        <button id="sechand2" onclick="mdamSechand2()">2. Hand Stores2</button>
+                    </li>
                     
                 </ul>
             </div>
@@ -69,6 +77,7 @@
             $("#glass2").hide();
             $("#batteries2").hide();
             $("#charity2").hide();
+            $("#sechand2").hide();
             
             // VARIABLES CONTAINING THE GEO LOCATIONS   
             var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
@@ -77,6 +86,8 @@
             var glassGeo = [ ["55.407586", "10.361147"], ["55.386334", "10.417280"] ];    
             var batteriesGeo = [ ["55.406373", "10.395450"], ["55.401182", "10.351430"] ]; 
             var charityGeo = [ ["55.406611", "10.396681"], ["55.406416", "10.437536"], ["55.395694", "10.354624"] ]; 
+            var sechandGeo = [ ["55.405429", "10.390244"], ["55.403285", "10.371147"] ]; 
+            
             
             var countPaper = paperGeo.length;
             var countGenWaste = generalWasteGeo.length;
@@ -84,9 +95,24 @@
             var countGlass = glassGeo.length;
             var countBatteries = batteriesGeo.length;
             var countCharity = charityGeo.length;
+            var countSechand = sechandGeo.length;
             
             
             var map;
+            
+            function mdamSechand() { 
+              countSechand = 0;
+              initMap();
+              $("#sechand").hide();
+              $("#sechand2").show();
+            }
+            
+            function mdamSechand2() {
+               countSechand = sechandGeo.length;
+               initMap();
+               $("#sechand").show();
+               $("#sechand2").hide();
+            }
             
             function mdamCharity() { 
               countCharity = 0;
@@ -175,10 +201,6 @@
             
             function initMap() {
                 
-                var myLatLng = "55.402403, -10.385522";
-
-                var myLatLng2 = "55.404766, -10.400160";
-
                 //Pictures
                 var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
                 var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png'; 
@@ -186,6 +208,7 @@
                 var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
                 var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
                 var glassPic = 'images/glass_resized.png';
+                var sechandPic = 'images/2handstore_resized.png';
 
 
 
@@ -272,6 +295,17 @@
                     }
                 }
                 
+                function sechandFunc() {
+                    var marker, i;
+                    for (i = 0; i < countSechand; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(sechandGeo[i][0], sechandGeo[i][1]),
+                        map: map,
+                        icon: sechandPic
+                      });
+                    }
+                }
+                
             // RUN THE FUNCTIONS FOR GEOLOCATION
             generalWasteFunc();
             paperFunc();
@@ -279,6 +313,7 @@
             glassFunc();
             batteriesFunc();
             charityFunc();
+            sechandFunc();
             
 
 
