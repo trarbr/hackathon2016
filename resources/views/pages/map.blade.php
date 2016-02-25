@@ -34,7 +34,6 @@
                     <li>
                         <button id="generalWaste">General Waste</button>
                     </li>
-                    
                 </ul>
             </div>
                 
