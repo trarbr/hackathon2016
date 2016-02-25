@@ -19,7 +19,7 @@ class CreateNewsletterTable extends Migration
             $table->integer('zipcode');
             $table->integer('mobile')->unique();
             $table->enum('notification_type', ['email', 'mobile', 'all']);
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

@@ -12,14 +12,14 @@
         <div id="header">
         	<div class="logo">SPACE FOR LOGO
             </div>
-        
+
         	<nav>
             <a href="#">menu1</a>
             <a href="#">menu1</a>
-            <a href="#">menu1</a>                      
-            </nav>   
+            <a href="#">menu1</a>
+            </nav>
         </div>
-        
+
         <!-- Her er hovedindhold til forsiden -->
         <container class="container">
             <div class="map">SPACE FOR MAP
@@ -31,13 +31,13 @@
             <div class="news">SPACE FOR NEWS
             </div>
         </container>
-        
-        
-        
+
+
+
         <footer>
        		<p>
             hallo</p>
         </footer>
-        
+
 </body>
 </html>
