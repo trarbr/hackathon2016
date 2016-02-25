@@ -26,13 +26,21 @@
         
         <!-- Her er hovedindhold til forsiden -->
         <container class="container">
-            <div id="map">    
-            </div>
+            <div id="map">
+                
+            </div>    
+                
             
             <div id="mapnavcont"> 
                 <ul>
                     <li>
-                        <button id="generalWaste">General Waste</button>
+                        <button id="generalWaste" onclick="mdamGenWaste()">General Waste</button>
+                    </li>
+                    <li>
+                        <button id="paper" onclick="mdamPaper()">Paper</button>
+                    </li>
+                    <li>
+                        <button id="pant"> Pant</button>
                     </li>
                     
                 </ul>
@@ -40,11 +48,31 @@
                 
         <script type="text/javascript">
                
-            // GEO LOCATIONS   
+            
+            // VARIABLES CONTAINING THE GEO LOCATIONS   
             var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
             var paperGeo = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
             
+            var countPaper = paperGeo.length;
+            var countGenWaste = generalWasteGeo.length;
+            
             var map;
+            
+            function mdamGenWaste() {
+                countGenWaste = 0;
+                initMap(); 
+            }
+            
+            function mdamPaper() { 
+              countPaper = 0;
+              initMap();
+            }
+            
+            
+            // TOGGLE BUTTON TEST ON PANT
+            
+            
+            
             function initMap() {
                 var myLatLng = "55.402403, -10.385522";
 
@@ -68,17 +96,17 @@
                           '<p>Blah blah blah </p>'+
                       '</div>'+
                   '</div>';
-      
-      
+
+
                 map = new google.maps.Map(document.getElementById('map'), {
                   center: {lat: 55.402403, lng: 10.385522},
                   zoom: 13
 
                 });
-                
+
                 function generalWasteFunc() {
                     var marker, i;
-                    for (i = 0; i < generalWasteGeo.length; i++) {  
+                    for (i = 0; i < countGenWaste; i++) {  
                       marker = new google.maps.Marker({
                         position: new google.maps.LatLng(generalWasteGeo[i][0], generalWasteGeo[i][1]),
                         map: map,
@@ -86,12 +114,11 @@
                       });
                     }
                 }
-            
-            
+
+
                 function paperFunc() {
-                    
                     var marker, i;
-                    for (i = 0; i < paperGeo.length; i++) {  
+                    for (i = 0; i < countPaper; i++) {  
                       marker = new google.maps.Marker({
                         position: new google.maps.LatLng(paperGeo[i][0], paperGeo[i][1]),
                         map: map,
@@ -99,14 +126,14 @@
                       });
                     }
                 }
-            
+                
+                
+
             generalWasteFunc();
-            
+
             paperFunc();
-            
-              
-            
-            
+
+
             //--------------------------------------------------------
             /* INFO WINDOW
             var infowindow = new google.maps.InfoWindow({
@@ -114,13 +141,17 @@
             });
             */
             //-----------------------------------------------------------
+
+            }
             
+            
+            
+        </script>
         
-            }    
-        </script>
+        
         <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgNgm0F35m5uI_elKUjTAWpHVaFHb_KA&callback=initMap">
-        </script>
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgNgm0F35m5uI_elKUjTAWpHVaFHb_KA&callback=initMap"> 
+        </script> 
         
            
             <div class="video">SPACE FOR VIDEO
