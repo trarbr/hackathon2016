@@ -4,10 +4,12 @@
 	}
         
 #mapnavcont {
+    position: relative;
     width: 100%;
-    height: 80px;
-    background-color: red;
-    opacity: 0.8;
+    height: 70px;
+    background-color: rgba(150, 204, 0, 0.6);
+    margin-top: -70px;
+    z-index: 9999999;
 }
 
 ul {
@@ -22,6 +24,20 @@ li {
 
 a {
     display: block;
-    padding: 8px;
-    
+    padding: 8px;   
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button img {
+    height: 40px;
+    width: auto;
+    padding: 10px;
+}
+
+button p {
+    font-family: abel;
 }
