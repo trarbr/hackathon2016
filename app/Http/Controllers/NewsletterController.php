@@ -28,9 +28,9 @@ class NewsletterController extends Controller
                     'notification_type' => $request->notification_type
                 ]);
                 $this->send_notification($request->email, 'newsletter.subscribe');
-                return "Fint!";
+                return "ok";
             } catch (\Exception $e) {
-                return "Der er opstået en fejl!";
+                return "fejl";
             }
         } else {
             return $this->subscribe_update($request);

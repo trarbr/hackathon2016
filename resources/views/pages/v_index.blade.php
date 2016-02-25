@@ -77,10 +77,16 @@
         </div>
         <div class="col-xs-12 col-md-6">
             <h4>Remember to take the trash can out - sign up to get a reminder!</h4>
-            <form role="form">
+
+            <strong id="sub_msg" class="hidden">You have now subscribed!</strong>
+            <form role="form" id="sub_form">
                 <div class="form-group">
                     <label for="sub_email">Email address:</label>
                     <input type="email" class="form-control" id="sub_email">
+                </div>
+                <div class="form-group">
+                    <label for="sub_mobile">Mobile:</label>
+                    <input type="number" class="form-control" id="sub_mobile">
                 </div>
                 <div class="form-group">
                     <label for="sub_street">Street:</label>
@@ -89,10 +95,6 @@
                 <div class="form-group">
                     <label for="sub_zipcode">Zipcode:</label>
                     <input type="number" class="form-control" id="sub_zipcode">
-                </div>
-                <div class="form-group">
-                    <label for="sub_mobile">Mobile:</label>
-                    <input type="number" class="form-control" id="sub_mobile">
                 </div>
                 <div class="form-group">
                     <label for="sub_notify">Notification type:</label>
@@ -133,11 +135,12 @@
 
 <script type="text/javascript">
     $(function ($) {
+
+        $("#unsubscribe-hidden").toggle('hidden');
+
         /**********************
          * UNSUBSCRIBE
          **********************/
-
-        $("#unsubscribe-hidden").toggle('hidden');
 
         $("#btn-unsubscribe-open").click(function () {
             $("#unsubscribe-hidden").toggle('hidden');
@@ -151,35 +154,40 @@
             });
         });
 
-
-
         /**********************
          * SUBSCRIBE
          **********************/
 
-        $("#btn-unsubscribe-open").click(function () {
+        $("#sub_btn").click(function () {
+            var sub_email = $("#sub_email").val();
+            var sub_mobile = $("#sub_mobile").val();
+            var sub_street = $("#sub_street").val();
+            var sub_zipcode = $("#sub_zipcode").val();
+            var sub_notify = $("#sub_notify").val();
+            $.ajax({
+                url: '/subscribe',
+                type: 'post',
+                data: {
+                    email: sub_email,
+                    street: sub_street,
+                    zipcode: sub_zipcode,
+                    mobile: sub_mobile,
+                    notification_type: sub_notify
+                },
+                success: function (data) {
+                    console.log(data);
+                    if(data == "ok") {
 
-        $.ajax({
-            url: '/subscribe',
-            type: 'post',
-            data: {
-                title: title,
-                iconDisplayBackground: iconDisplayBackground,
-                iconDisplay: iconDisplay,
-                date: date,
-                time: time,
-                body: body,
-                _token: token
-            },
-            success: function (data) {
-                $('#rowPage').slideUp(500);
-                $('#successPage').removeClass('hidden');
+                    }
 
-            }, error: function (data) {
-                var error = JSON.parse(data.responseText);
-                console.log(error);
-            }
-        }
+                    $('#sub_form').slideUp(500);
+                    $('#sub_msg').removeClass('hidden');
+                }, error: function (data) {
+                    var error = JSON.parse(data.responseText);
+                    console.log(error);
+                }
+            });
+        });
     });
 </script>
 </body>
