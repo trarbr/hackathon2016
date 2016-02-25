@@ -105,11 +105,11 @@
                     </li>
                     
                     <li>
-                        <button id="sechand" onclick="mdamSechand()">
+                        <button id="sechand" onclick="mdamSechand3()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
                             <p>2. hand stores</p>
                         </button>
-                        <button id="sechand2" onclick="mdamSechand2()">
+                        <button id="sechand2" onclick="mdamSechand4()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
                             <p>2. hand stores</p>
                         </button>
@@ -142,7 +142,7 @@
             var glassGeo = [ ["55.407586", "10.361147"], ["55.386334", "10.417280"], ["55.388204", "10.436706"] ];    
             var batteriesGeo = [ ["55.406373", "10.395450"], ["55.401182", "10.351430"] ]; 
             var charityGeo = [ ["55.406611", "10.396681"], ["55.406416", "10.437536"], ["55.395694", "10.354624"] ]; 
-            var sechandGeo = [ ["55.405429", "10.390244"], ["55.403285", "10.371147"] ]; 
+            var sechandGeo = [ ["55.403285", "10.371147"], ["55.395658", "10.398721"] ];
             
             
             var countPaper = paperGeo.length;
@@ -156,7 +156,23 @@
             
             var map;
             
-            function mdamSechand() { 
+            function mdamSechand3() { 
+              //countSechand = 0;
+              initMap();
+              $("#sechand").hide();
+              $("#sechand2").show();
+            }
+            
+            function mdamSechand4() {
+               //countSechand = sechandGeo.length;
+               initMap();
+               $("#sechand").show();
+               $("#sechand2").hide();
+            }
+            
+            // HUSK AT RETTE FUNCTIONERNE I ONCLICK I HTML'EN TILBAGE TIL DE ORIGINALE FUNCTIONS!
+            
+            /*function mdamSechand() { 
               countSechand = 0;
               initMap();
               $("#sechand").hide();
@@ -168,7 +184,7 @@
                initMap();
                $("#sechand").show();
                $("#sechand2").hide();
-            }
+            } */
             
             function mdamCharity() { 
               countCharity = 0;
@@ -255,17 +271,28 @@
                $("#pant2").hide();
             }
             
-            // INFOWINDOW
-            var contentString = '<div id="content">'+
-                '<div id="siteNotice">'+
-                    '</div>'+
-                        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-                        '<div id="bodyContent">'+
-                        '<p>Blah blah blah </p>'+
-                    '</div>'+
-                '</div>';
+            // INFOWINDOW Text
+                var contentString1 = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                        '</div>'+
+                            '<h1 id="firstHeading" class="firstHeading">Uluru1</h1>'+
+                            '<div id="bodyContent">'+
+                            '<p>Blah blah blah </p>'+
+                        '</div>'+
+                    '</div>';
+                    
+                var contentString2 = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                        '</div>'+
+                            '<h1 id="firstHeading" class="firstHeading">Uluru2</h1>'+
+                            '<div id="bodyContent">'+
+                            '<p>Blah blah blah </p>'+
+                        '</div>'+
+                    '</div>';
+            
             
             function initMap() {
+                
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 55.402403, lng: 10.385522},
                     scrollwheel: false,
@@ -344,12 +371,6 @@
                 }
                 
                 
-                //INFO WINDOW
-                var infowindow = new google.maps.InfoWindow({
-                content: contentString
-                });
-            
-                
                 function sechandFunc() {
                     var marker, i;
                     for (i = 0; i < countSechand; i++) {  
@@ -359,13 +380,49 @@
                           icon: sechandPic
                         });     
                     }
+                } 
+                
+                
+                //INFO WINDOW CONTENT TO CONTENSTRING
+                var infowindow1 = new google.maps.InfoWindow({
+                content: contentString1
+                });
+                
+                var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
+                });
+                
+                
+                function sechandFunc1() {
+                    function adress1() {
+                     
+                        marker1 = new google.maps.Marker({
+                          position: new google.maps.LatLng(sechandGeo[0][0], sechandGeo[0][1]),
+                          map: map,
+                          icon: sechandPic
+                        });
+                    marker1.addListener('click', function() {
+                            infowindow1.open(map, marker1);
+                        });    
+                    }
+                    
+                    adress1();
+                    
+                    function adress2() {
+                     
+                        marker2 = new google.maps.Marker({
+                          position: new google.maps.LatLng(sechandGeo[1][0], sechandGeo[1][1]),
+                          map: map,
+                          icon: sechandPic
+                        });
+                    marker2.addListener('click', function() {
+                            infowindow2.open(map, marker2);
+                        });    
+                    }
+                    
+                    adress2();
                 }
                 
-                /* ANG INFOWINDOW: LAV EN NY FUNC PR. SECHAND STORE. 
-                 * marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        }); 
-                */
                 
             // RUN THE FUNCTIONS FOR GEOLOCATION
             generalWasteFunc();
@@ -374,11 +431,8 @@
             glassFunc();
             batteriesFunc();
             charityFunc();
-            sechandFunc();
-            
-
-
-            
+            //sechandFunc();
+            sechandFunc1();
 
             }
             
