@@ -36,6 +36,12 @@
                 
             
             <div id="mapnavcont"> 
+                <form action="#">
+                    Street
+                    <input type="search" name="address" placeholder="name of the street...">
+                </form>
+                
+                
                 <ul>
                     <li>
                         <button id="generalWaste" onclick="mdamGenWaste()">
@@ -351,12 +357,15 @@
                           position: new google.maps.LatLng(sechandGeo[i][0], sechandGeo[i][1]),
                           map: map,
                           icon: sechandPic
-                        });
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });  
+                        });     
                     }
                 }
+                
+                /* ANG INFOWINDOW: LAV EN NY FUNC PR. SECHAND STORE. 
+                 * marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        }); 
+                */
                 
             // RUN THE FUNCTIONS FOR GEOLOCATION
             generalWasteFunc();
