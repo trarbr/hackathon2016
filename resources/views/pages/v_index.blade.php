@@ -136,7 +136,9 @@
 
             $("#btn-unsubscribe-go").click(function () {
                 var email = $("#btn-unsubscribe-field").val();
-                
+                $.get("unsubscribe/" + email, function (data) {
+                    $("#btn-unsubscribe-field").val("");
+                });
             });
         });
     });
