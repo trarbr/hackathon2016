@@ -40,15 +40,15 @@ the city will become even more environment friendly,
 charities will get more goods, because there are more people using the 'clothes' bins.
 
 ##What features will achieve the desired outcomes?
-*Must have
+* Must have
 	* Map (google maps)
-		*input field for the desired street name to be shown on the map
-		*markers representing all kinds of bins in the desired area
-		*legend on the map explaining the bins
+		* input field for the desired street name to be shown on the map
+		* markers representing all kinds of bins in the desired area
+		* legend on the map explaining the bins
 	* Sign up form for reminders to bring the bin out (newsletter function)
 	* Database
 
-*Nice to have
+* Nice to have
 	* Database connected with the map
 	* Add new places in the backend system
 	* Promotional video
