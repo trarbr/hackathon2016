@@ -8,6 +8,8 @@
         <meta charset="utf-8">
         
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         
     </head>
 
@@ -40,7 +42,7 @@
                         <button id="paper" onclick="mdamPaper()">Paper</button>
                     </li>
                     <li>
-                        <button id="pant"> Pant</button>
+                        <button id="pant" onclick="mdamPant()">Pant</button>
                     </li>
                     
                 </ul>
@@ -70,13 +72,13 @@
               initMap();
             }
             
+            function mdamPant() { 
+              countPant = 0;
+              initMap();
+            }
             
-            // TOGGLE BUTTON TEST ON PANT
-            $(document).ready(function(){
-                $("pant").click(function(){
-                    $("p").toggle();
-                });
-            });
+            
+
             
             
             
@@ -163,7 +165,6 @@
             //-----------------------------------------------------------
 
             }
-            
             
             
         </script>
