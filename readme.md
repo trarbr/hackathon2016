@@ -11,7 +11,7 @@
 * Eva Sramkova
 * Anders Butzbach Christensen, anders@chally.me
 * Lars Svendsen
-* Vigan Shemsiu, www.shemsiu.dk
+* Vigan Shemsiu, www.shemsiu.dk, info@shemsiu.dk
 
 ##How might we help people living in Odense?
 We find a problem and solve it.
