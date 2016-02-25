@@ -52,9 +52,11 @@
             // VARIABLES CONTAINING THE GEO LOCATIONS   
             var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
             var paperGeo = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
+            var pantGeo = [ ["55.397738", "10.392915"] ];
             
             var countPaper = paperGeo.length;
             var countGenWaste = generalWasteGeo.length;
+            var countPant = pantGeo.length;
             
             var map;
             
@@ -70,6 +72,11 @@
             
             
             // TOGGLE BUTTON TEST ON PANT
+            $(document).ready(function(){
+                $("pant").click(function(){
+                    $("p").toggle();
+                });
+            });
             
             
             
@@ -127,11 +134,24 @@
                     }
                 }
                 
+                function pantFunc() {
+                    var marker, i;
+                    for (i = 0; i < countPant; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(pantGeo[i][0], pantGeo[i][1]),
+                        map: map,
+                        icon: pantPic
+                      });
+                    }
+                }
+                
                 
 
             generalWasteFunc();
 
             paperFunc();
+            
+            pantFunc();
 
 
             //--------------------------------------------------------
