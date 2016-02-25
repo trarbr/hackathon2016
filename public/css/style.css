@@ -145,6 +145,7 @@
 				text-decoration: none;	
 				}
 				
+
 			.map {
 				width: 100%;
 				height: 300px;
@@ -153,6 +154,7 @@
 				float:left;
 				display: block;
 				}
+
 				
 				#googleMap{					
 					width:100%;
