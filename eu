@@ -1,0 +1,359 @@
+[33mcommit 439f4b28ce79222ba63e32714269010d55652010[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:56:32 2016 +0100
+
+    Daily notify almost done
+
+[33mcommit 0a925c12e5ff0b7be3b4bfa75950ce9860fe3df4[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:48:47 2016 +0100
+
+    Setting daily message up
+
+[33mcommit 392e206aba4c27195402a374827bad0454aa4842[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:48:01 2016 +0100
+
+    Making the newsletter reminder finish
+
+[33mcommit a03a3dd00f6de3d0ab994394ca55013ed53e2bc6[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:44:23 2016 +0100
+
+    Modify routes
+
+[33mcommit 4f4adc8b33e4396f695073bc22026b5429f6f3bd[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:42:38 2016 +0100
+
+    adding controller
+
+[33mcommit 86cb9ddfd4f4e4a8975125b776c4f854de09fd48[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 21:38:32 2016 +0100
+
+    Updating newsletter controller
+
+[33mcommit 802faf59045484a9521f69db23cfc0b104886dfd[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 20:55:11 2016 +0100
+
+    Working with routes
+
+[33mcommit 710f323f3bb58ea39df57b298dde718e8a2bbeaa[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 20:54:44 2016 +0100
+
+    working with notifying mail
+
+[33mcommit 8a9876b8ac55628c7d3c46be5565a9ff08954260[m
+Merge: ad715ee 7dfd072
+Author: Lars Svendsen <lars.svendsen86@gmail.com>
+Date:   Wed Feb 24 13:34:56 2016 +0100
+
+    Merge pull request #5 from shemsiu/frontend
+    
+    2 marker loops on the map
+
+[33mcommit 7dfd072425c35f5536293c7297c2650b01980ee9[m
+Author: Flotmand <lars.svendsen86@gmail.com>
+Date:   Wed Feb 24 13:33:41 2016 +0100
+
+    #2 marker loop
+    
+    Paper
+
+[33mcommit f6e5d543bc22da8de86d2374f5a189fb603b2b58[m
+Author: Flotmand <lars.svendsen86@gmail.com>
+Date:   Wed Feb 24 12:45:35 2016 +0100
+
+    #1 marker loop
+    
+    #1 MARKER LOOP WORKS
+
+[33mcommit ad715eef3ccfaeb5cff8d8c6a99680504dbb57d6[m
+Merge: dea831e cc37ea3
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 12:11:24 2016 +0100
+
+    Merge and fix merge conflict
+
+[33mcommit dea831eb7b7e31ec67f1c0d5b2eae2f685543a09[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 12:08:17 2016 +0100
+
+    Note
+
+[33mcommit 171448d2181f720b80ac7e2f531f928a842465f1[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 12:05:54 2016 +0100
+
+    Fix bug with newsletter
+
+[33mcommit 322865f3a030c10d589c1d2422768130e1a1e42f[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 12:01:17 2016 +0100
+
+    Making subscribe and unsubscribe work!
+
+[33mcommit 270d310630981702d2f29987b250f6b4690ccb51[m
+Author: Flotmand <lars.svendsen86@gmail.com>
+Date:   Wed Feb 24 11:51:41 2016 +0100
+
+    Maps shizzle #1
+    
+    yeah
+
+[33mcommit a87412fd379dd838494dd3dd39efa2ec97fbd458[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 11:50:35 2016 +0100
+
+    Subscribe
+
+[33mcommit cc37ea329ce327ff89be6de0e5c71b7337dc533e[m
+Author: evisko <evkasramkova@gmail.com>
+Date:   Wed Feb 24 11:23:50 2016 +0100
+
+    mockup for mobile
+
+[33mcommit f2b4e3f0650e58f562bc375b7566c01ed8e0f482[m
+Merge: be4bd73 9b42926
+Author: Anders Butzbach Christensen <anders@chally.me>
+Date:   Wed Feb 24 11:15:33 2016 +0100
+
+    Merge pull request #4 from shemsiu/frontend
+    
+    Frontend
+
+[33mcommit 9b42926b404ab54f8dc63c89d01b251664e46a0c[m
+Author: Flotmand <lars.svendsen86@gmail.com>
+Date:   Wed Feb 24 11:15:11 2016 +0100
+
+    Oprettet ny route + map.balde.php
+    
+    Yeah
+
+[33mcommit 59141660e806b0654476b3a82152380c5f3922f7[m
+Merge: e2bbbb6 56c56f1
+Author: Anders Butzbach Christensen <anders@chally.me>
+Date:   Wed Feb 24 11:08:14 2016 +0100
+
+    Merge pull request #3 from AndersBChristensen/master
+    
+    frontend
+
+[33mcommit 56c56f1a32eaa2d71a917eb475bfb329a2e5fb02[m
+Author: Anders Butzbach Christensen <anderskoch@live.dk>
+Date:   Wed Feb 24 11:07:41 2016 +0100
+
+    frontend
+
+[33mcommit e2bbbb62f61019188148a6a41ee8dcf1f97054ef[m
+Author: verrr <andreiverdes@yahoo.com>
+Date:   Wed Feb 24 10:42:31 2016 +0100
+
+    Message!
+
+[33mcommit 498cfac685600197c1befc568ef44a74013ff5f6[m
+Merge: be4bd73 99a4d84
+Author: verrr <andreiverdes@yahoo.com>
+Date:   Wed Feb 24 10:40:10 2016 +0100
+
+    Merge branch 'frontend' of https://github.com/shemsiu/hackathon2016 into frontend
+
+[33mcommit be4bd73b48e3cdcfc6fd343ffb9c2a805f6b6c88[m
+Merge: 6f4cf3b 4cdd8fb
+Author: Anders Butzbach Christensen <anders@chally.me>
+Date:   Wed Feb 24 10:18:02 2016 +0100
+
+    Merge pull request #2 from AndersBChristensen/master
+    
+    Images, icons and so on
+
+[33mcommit 4cdd8fb3b13ca4eae9ef01dfe25e7011de77ff93[m
+Merge: 3abe57d 6f4cf3b
+Author: Anders Butzbach Christensen <anderskoch@live.dk>
+Date:   Wed Feb 24 10:17:18 2016 +0100
+
+    Merge remote-tracking branch 'shemsiu/master'
+
+[33mcommit 3abe57d27184c448ec305222b7923660069116e6[m
+Author: Anders Butzbach Christensen <anderskoch@live.dk>
+Date:   Wed Feb 24 10:17:13 2016 +0100
+
+    Images, icons and so on
+
+[33mcommit 99a4d84fe4bd03a886f735945ef2298ffc3549b9[m
+Author: Khaulrich <kimx449c@edu.eal.dk>
+Date:   Wed Feb 24 10:13:06 2016 +0100
+
+    Test
+
+[33mcommit 6f4cf3ba5670f58eeab61eae1df6e5781c157fca[m
+Author: Anders Butzbach Christensen <anders@chally.me>
+Date:   Wed Feb 24 09:53:28 2016 +0100
+
+    Updated readme file
+
+[33mcommit d723fc97f6cfa604e8e31c56bed271494b728df8[m
+Author: Khaulrich <kimx449c@edu.eal.dk>
+Date:   Wed Feb 24 09:49:46 2016 +0100
+
+    Testting
+
+[33mcommit 77c2d48993e47611a7f988b64a74f954625c54ec[m
+Merge: 9afde8d 160c9ad
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 09:28:58 2016 +0100
+
+    Merge branch 'master' of https://github.com/shemsiu/hackathon2016
+
+[33mcommit 9afde8d769c11842f545eae39fa7d4e6157e13fa[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Wed Feb 24 09:26:47 2016 +0100
+
+    newsletter request
+
+[33mcommit 160c9ad809c7dfae57b65ed6a56831b5785552fb[m
+Merge: 4d63ac7 d1e17a1
+Author: Anders Butzbach Christensen <anders@chally.me>
+Date:   Wed Feb 24 09:24:47 2016 +0100
+
+    Merge pull request #1 from AndersBChristensen/master
+    
+    Master
+
+[33mcommit d1e17a1ef1e46a4a0a6ba1ac929e7b1a22e760e3[m
+Author: Anders Butzbach Christensen <anderskoch@live.dk>
+Date:   Wed Feb 24 09:18:52 2016 +0100
+
+    Routes and index.blade.php
+    
+    Setting up the right pages.
+
+[33mcommit 8bbb02e6754c1762ea8b4a37d63a0bddf8067525[m
+Merge: 203a8d4 4d63ac7
+Author: Anders Butzbach Christensen <anderskoch@live.dk>
+Date:   Wed Feb 24 09:06:50 2016 +0100
+
+    Merge remote-tracking branch 'shemsiu/master'
+
+[33mcommit 3d136ee639e3e9e72edc9077d5ce6a0ac544bf21[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Tue Feb 23 23:01:54 2016 +0100
+
+    Start implementing of newsletter
+
+[33mcommit 4d63ac7898053eb065f6a07915cb9416dbad23dc[m
+Merge: 93cc4d6 0716ad3
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Tue Feb 23 21:46:11 2016 +0100
+
+    Merge branch 'dev'
+
+[33mcommit 0716ad345ef1ef62cb54f1c6d91e4506511a265f[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Tue Feb 23 21:37:36 2016 +0100
+
+    Model created
+
+[33mcommit 93cc4d66331a6699fb391e447bfdc2d0f4f7f77a[m
+Author: Flotmand <lars.svendsen86@gmail.com>
+Date:   Tue Feb 23 15:31:17 2016 +0100
+
+    Maps API
+    
+    Blah blah blah
+
+[33mcommit 00b9af5a70f70d0e5d7818b70e66c01681574dc8[m
+Merge: 208aa2f 5571686
+Author: verrr <andreiverdes@yahoo.com>
+Date:   Tue Feb 23 14:44:29 2016 +0100
+
+    Merge remote-tracking branch 'refs/remotes/origin/Frontend'
+
+[33mcommit 5571686ce82e410bb7c6a0756e8590d4576453f8[m
+Author: Khaulrich <kimx449c@edu.eal.dk>
+Date:   Tue Feb 23 14:19:50 2016 +0100
+
+    CSS Structure
+
+[33mcommit 208aa2f2a2f0b1ec6f2ba9a82a11779bec945b93[m
+Author: Khaulrich <kimx449c@edu.eal.dk>
+Date:   Tue Feb 23 14:03:29 2016 +0100
+
+    HTML Structure
+
+[33mcommit 41af29cf349b3ce64c5f6dda2e7215b946e3f49d[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Tue Feb 23 11:46:00 2016 +0100
+
+    Working with migrations
+
+[33mcommit e5958ea26d5bfaa0cd87503827cb4185321f74a9[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Tue Feb 23 10:53:50 2016 +0100
+
+    database .env
+
+[33mcommit 203a8d48a113e62fce2914232a44956e0077004e[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:58:17 2016 +0100
+
+    Updated readme
+
+[33mcommit 00dd0be930809abbbac3838e4b1c0ba613454a9e[m
+Merge: a47753c a5d8dac
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:56:49 2016 +0100
+
+    Merge branch 'master' of https://github.com/shemsiu/hackathon2016
+
+[33mcommit a47753ce121ae10180a7d43c2662dc2839e475b4[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:56:32 2016 +0100
+
+    Test
+
+[33mcommit 26ceb29667898b14352d5bda66895996ef60429f[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:55:23 2016 +0100
+
+    Test
+
+[33mcommit a5d8dac806ded71e223f8a821fd931782cc935f1[m
+Author: Vigan Shemsiu <vigan@shemsiu.com>
+Date:   Mon Feb 22 15:54:29 2016 +0100
+
+    Deleted readme.md
+
+[33mcommit fd24c85f14424461084aaee5c7e55184855c63f5[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:53:25 2016 +0100
+
+    Updated readme.md for github
+
+[33mcommit c1bd4c7f9301d9503b1b478b580b242fa3d6bb88[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:43:45 2016 +0100
+
+    Setup
+
+[33mcommit c94bcaf247fa66e1dafb50bdc212e3d702653c53[m
+Merge: da24c0e 5d328d7
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:43:30 2016 +0100
+
+    Merge branch 'master' of https://github.com/shemsiu/hackathon2016
+
+[33mcommit da24c0e7950675ab8f5f5c7c7e9143a24c21afc0[m
+Author: Vigan Shemsiu <vigan@shemsiu.dk>
+Date:   Mon Feb 22 15:42:35 2016 +0100
+
+    Laravel installation
+
+[33mcommit 5d328d77da1d3624e1b76e9a306c83b71a7b726d[m
+Author: Vigan Shemsiu <vigan@shemsiu.com>
+Date:   Mon Feb 22 15:20:29 2016 +0100
+
+    Initial commit

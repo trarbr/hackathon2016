@@ -1,0 +1,53 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-blue {
+    background: lightblue;
+}
+
+.navbar-default {
+    height: 100px;
+    padding-top: 20px;
+}
+
+.overlay {
+    background:transparent;
+    position:relative;
+    width:100%;
+    height:480px;
+    top:480px;
+    margin-top:-480px;
+}
+
+.welcome {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container-fluid-full {
+    width: 100%;
+}
+.maps-button {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+.btn-map {
+    min-width: 240px;
+    padding: 8px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+.newsletter {
+    background: #eee;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

@@ -108,7 +108,6 @@
                             <p>2. hand stores</p>
                         </button>
                     </li>
-                    
                 </ul>
             </div>
                 
