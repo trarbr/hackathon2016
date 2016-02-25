@@ -105,11 +105,11 @@
                     </li>
                     
                     <li>
-                        <button id="sechand" onclick="mdamSechand3()">
+                        <button id="sechand" onclick="mdamSechand()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
                             <p>2. hand stores</p>
                         </button>
-                        <button id="sechand2" onclick="mdamSechand4()">
+                        <button id="sechand2" onclick="mdamSechand2()">
                             <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
                             <p>2. hand stores</p>
                         </button>
@@ -155,24 +155,24 @@
             
             
             var map;
-            
+            /* SNAK MED VIGAN OM DET HER!!
             function mdamSechand3() { 
-              //countSechand = 0;
+              sechandGeo = [];
               initMap();
               $("#sechand").hide();
               $("#sechand2").show();
             }
             
             function mdamSechand4() {
-               //countSechand = sechandGeo.length;
+               sechandGeo = [ ["55.403285", "10.371147"], ["55.395658", "10.398721"] ];
                initMap();
                $("#sechand").show();
                $("#sechand2").hide();
-            }
+            } */
             
-            // HUSK AT RETTE FUNCTIONERNE I ONCLICK I HTML'EN TILBAGE TIL DE ORIGINALE FUNCTIONS!
+           
             
-            /*function mdamSechand() { 
+            function mdamSechand() { 
               countSechand = 0;
               initMap();
               $("#sechand").hide();
@@ -184,7 +184,7 @@
                initMap();
                $("#sechand").show();
                $("#sechand2").hide();
-            } */
+            } 
             
             function mdamCharity() { 
               countCharity = 0;
@@ -270,6 +270,7 @@
                $("#pant").show();
                $("#pant2").hide();
             }
+            
             
             // INFOWINDOW Text
                 var contentString1 = '<div id="content">'+
@@ -395,7 +396,7 @@
                 
                 function sechandFunc1() {
                     function adress1() {
-                     
+                        
                         marker1 = new google.maps.Marker({
                           position: new google.maps.LatLng(sechandGeo[0][0], sechandGeo[0][1]),
                           map: map,
@@ -406,7 +407,7 @@
                         });    
                     }
                     
-                    adress1();
+                    
                     
                     function adress2() {
                      
@@ -419,7 +420,7 @@
                             infowindow2.open(map, marker2);
                         });    
                     }
-                    
+                    adress1();
                     adress2();
                 }
                 
@@ -431,8 +432,8 @@
             glassFunc();
             batteriesFunc();
             charityFunc();
-            //sechandFunc();
-            sechandFunc1();
+            sechandFunc();
+            //sechandFunc1();
 
             }
             
