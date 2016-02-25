@@ -138,6 +138,7 @@
                 var email = $("#btn-unsubscribe-field").val();
                 $.get("unsubscribe/" + email, function (data) {
                     $("#btn-unsubscribe-field").val("");
+                    $("#unsubscribe-msg").html("You have now unsubscribed!");
                 });
             });
         });
