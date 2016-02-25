@@ -129,6 +129,10 @@
 
 <script type="text/javascript">
     $(function ($) {
+        /**********************
+         * UNSUBSCRIBE
+         **********************/
+
         $("#unsubscribe-hidden").toggle('hidden');
 
         $("#btn-unsubscribe-open").click(function () {
