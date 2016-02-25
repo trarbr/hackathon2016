@@ -85,44 +85,103 @@
                             
             
             </div>
-            <div class="news">SPACE FOR NEWS
-            </div>
+
             
             </div>
+
+            <div id="news">
+
+                <div id="style1" class="news">
+
+                    <figure> 
+
+                        
+                    </figure>
+
+                    <article>
+
+                        <h1 class="headline">News Headline</h1>
+                        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Lorem Ipsum has been the industry's 
+                         standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type
+                          and scrambled it to make a type specimen book. 
+                          It has survived not only five centuries, but also the leap 
+                          into electronic typesetting, remaining essentially unchanged. 
+                          It was popularised in the 1960s with the release of Letraset 
+                          sheets containing Lorem Ipsum passages, and more recently with
+                           desktop publishing software
+                         like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+                    </article>
+
+
+                </div>
+
+                    <div id="style2" class="news">
+
+                    <figure> 
+
+                        <img src="####">
+
+                    </figure>
+
+                    <article>
+
+                        <h1 class="headline">News Headline</h1>
+                        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Lorem Ipsum has been the industry's 
+                         standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type
+                          and scrambled it to make a type specimen book. 
+                          It has survived not only five centuries, but also the leap 
+                          into electronic typesetting, remaining essentially unchanged. 
+                          It was popularised in the 1960s with the release of Letraset 
+                          sheets containing Lorem Ipsum passages, and more recently with
+                           desktop publishing software
+                         like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+                    </article>
+                    
+
+                </div>
+
+                    <div id="style1" class="news">
+
+                    <figure> 
+
+                        <img src="####">
+
+                    </figure>
+
+                    <article>
+
+                        <h1 class="headline">News Headline</h1>
+                        <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Lorem Ipsum has been the industry's 
+                         standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type
+                          and scrambled it to make a type specimen book. 
+                          It has survived not only five centuries, but also the leap 
+                          into electronic typesetting, remaining essentially unchanged. 
+                          It was popularised in the 1960s with the release of Letraset 
+                          sheets containing Lorem Ipsum passages, and more recently with
+                           desktop publishing software
+                         like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+                    </article>
+                    
+
+                </div>
+
+
+            </div>
+
         </div>
 
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <meta charset="utf-8">
-    </head>
-
-
-<body>
-        <div id="header">
-        	<div class="logo">SPACE FOR LOGO
-            </div>
-        
-        	<nav>
-            <a href="#">menu1</a>
-            <a href="#">menu1</a>
-            <a href="#">menu1</a>                      
-            </nav>   
-        </div>
-        
-        <!-- Her er hovedindhold til forsiden -->
-        <container class="container">
-            <div class="map">SPACE FOR MAP
-            </div>
-            <div class="video">SPACE FOR VIDEO
-            </div>
-            <div class="signup">SPACE FOR SIGNUP
-            </div>
-            <div class="news">SPACE FOR NEWS
-            </div>
-        </container>
-
-        
-        
         
         <footer>
        		<p>
@@ -133,6 +192,4 @@
 
 </html>
 	
-
-</html>
 
