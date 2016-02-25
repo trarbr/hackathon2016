@@ -8,8 +8,7 @@
         <meta charset="utf-8">
         
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" 
-   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
         
     </head>
 
@@ -37,6 +36,7 @@
                 <ul>
                     <li>
                         <button id="generalWaste" onclick="mdamGenWaste()">General Waste</button>
+                        <button id="generalWaste2" onclick="mdamGenWaste2()">General Waste</button>
                     </li>
                     <li>
                         <button id="paper" onclick="mdamPaper()">Paper</button>
@@ -65,20 +65,46 @@
             function mdamGenWaste() {
                 countGenWaste = 0;
                 initMap(); 
+                $("#generalWaste").hide();
+                $("#generalWaste2").show();
+            }
+            
+            function mdamGenWaste2() {
+                countGenWaste = generalWasteGeo.length;
+                initMap(); 
+                $("#generalWaste").show();
+                $("#generalWaste2").hide();
             }
             
             function mdamPaper() { 
               countPaper = 0;
               initMap();
+              $("#paper").hide();
             }
             
             function mdamPant() { 
               countPant = 0;
               initMap();
+              $("#pant").hide();
             }
             
+            //document.getElementById('generalWaste2').style.visibility = 'hidden';
             
-
+            /*function showGeneralWaste2() {
+                document.getElementById('generalWaste2').style.visibility = 'visible';
+            }*/
+            // FROM STACKOWERFLOW
+                /*var hidden = false;
+                function action() {
+                    hidden = !hidden;
+                    if(hidden) {
+                        document.getElementById('generalWaste2').style.visibility = 'hidden';
+                    } else {
+                        document.getElementById('generalWaste2').style.visibility = 'visible';
+                    }
+                }*/
+            
+            
             
             
             
@@ -147,10 +173,14 @@
                     }
                 }
                 
-                
-
-            generalWasteFunc();
-
+            function generalWasteFuncFull() {
+                generalWasteFunc()
+                $("#generalWaste2").hide();
+            }
+            
+            // THESE FUNCTIONS WILL RUND WHEN THE PAGE INITIALLY LOADS
+            generalWasteFuncFull()
+            
             paperFunc();
             
             pantFunc();
