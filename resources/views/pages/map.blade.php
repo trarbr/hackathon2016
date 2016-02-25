@@ -36,31 +36,99 @@
                 <ul>
                     <li>
                         <button id="generalWaste" onclick="mdamGenWaste()">General Waste</button>
-                        <button id="generalWaste2" onclick="mdamGenWaste2()">General Waste</button>
+                        <button id="generalWaste2" onclick="mdamGenWaste2()">General Waste2</button>
                     </li>
                     <li>
                         <button id="paper" onclick="mdamPaper()">Paper</button>
+                        <button id="paper2" onclick="mdamPaper2()">Paper2</button>
                     </li>
                     <li>
                         <button id="pant" onclick="mdamPant()">Pant</button>
+                        <button id="pant2" onclick="mdamPant2()">Pant2</button>
+                    </li>
+                    <li>
+                        <button id="glass" onclick="mdamGlass()">Glass</button>
+                        <button id="glass2" onclick="mdamGlass2()">Glass2</button>
+                    </li>
+                    <li>
+                        <button id="batteries" onclick="mdamBatteries()">Batteries</button>
+                        <button id="batteries2" onclick="mdamBatteries2()">Batteries2</button>
+                    </li>
+                    <li>
+                        <button id="charity" onclick="mdamCharity()">charity</button>
+                        <button id="charity2" onclick="mdamCharity2()">charity2</button>
                     </li>
                     
                 </ul>
             </div>
                 
         <script type="text/javascript">
-               
+            $("#generalWaste2").hide();
+            $("#paper2").hide();
+            $("#pant2").hide(); 
+            $("#glass2").hide();
+            $("#batteries2").hide();
+            $("#charity2").hide();
             
             // VARIABLES CONTAINING THE GEO LOCATIONS   
             var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
             var paperGeo = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
             var pantGeo = [ ["55.397738", "10.392915"] ];
+            var glassGeo = [ ["55.407586", "10.361147"], ["55.386334", "10.417280"] ];    
+            var batteriesGeo = [ ["55.406373", "10.395450"], ["55.401182", "10.351430"] ]; 
+            var charityGeo = [ ["55.406611", "10.396681"], ["55.406416", "10.437536"], ["55.395694", "10.354624"] ]; 
             
             var countPaper = paperGeo.length;
             var countGenWaste = generalWasteGeo.length;
             var countPant = pantGeo.length;
+            var countGlass = glassGeo.length;
+            var countBatteries = batteriesGeo.length;
+            var countCharity = charityGeo.length;
+            
             
             var map;
+            
+            function mdamCharity() { 
+              countCharity = 0;
+              initMap();
+              $("#charity").hide();
+              $("#charity2").show();
+            }
+            
+            function mdamCharity2() {
+               countCharity = charityGeo.length;
+               initMap();
+               $("#charity").show();
+               $("#charity2").hide();
+            }
+            
+            function mdamBatteries() { 
+              countBatteries = 0;
+              initMap();
+              $("#batteries").hide();
+              $("#batteries2").show();
+            }
+            
+            function mdamBatteries2() {
+               countBatteries = batteriesGeo.length;
+               initMap();
+               $("#batteries").show();
+               $("#batteries2").hide();
+            }
+            
+            function mdamGlass() { 
+              countGlass = 0;
+              initMap();
+              $("#glass").hide();
+              $("#glass2").show();
+            }
+            
+            function mdamGlass2() {
+               countGlass = glassGeo.length;
+               initMap();
+               $("#glass").show();
+               $("#glass2").hide();
+            }
             
             function mdamGenWaste() {
                 countGenWaste = 0;
@@ -75,40 +143,38 @@
                 $("#generalWaste").show();
                 $("#generalWaste2").hide();
             }
-            
+           
             function mdamPaper() { 
               countPaper = 0;
               initMap();
               $("#paper").hide();
+              $("#paper2").show();
             }
+            
+            function mdamPaper2() {
+                countPaper = paperGeo.length;
+                initMap();
+                $("#paper").show();
+                $("#paper2").hide();
+            }
+            
             
             function mdamPant() { 
               countPant = 0;
               initMap();
               $("#pant").hide();
+              $("#pant2").show();
             }
             
-            //document.getElementById('generalWaste2').style.visibility = 'hidden';
-            
-            /*function showGeneralWaste2() {
-                document.getElementById('generalWaste2').style.visibility = 'visible';
-            }*/
-            // FROM STACKOWERFLOW
-                /*var hidden = false;
-                function action() {
-                    hidden = !hidden;
-                    if(hidden) {
-                        document.getElementById('generalWaste2').style.visibility = 'hidden';
-                    } else {
-                        document.getElementById('generalWaste2').style.visibility = 'visible';
-                    }
-                }*/
-            
-            
-            
-            
+            function mdamPant2() {
+               countPant = pantGeo.length;
+               initMap();
+               $("#pant").show();
+               $("#pant2").hide();
+            }
             
             function initMap() {
+                
                 var myLatLng = "55.402403, -10.385522";
 
                 var myLatLng2 = "55.404766, -10.400160";
@@ -173,17 +239,47 @@
                     }
                 }
                 
-            function generalWasteFuncFull() {
-                generalWasteFunc()
-                $("#generalWaste2").hide();
-            }
-            
-            // THESE FUNCTIONS WILL RUND WHEN THE PAGE INITIALLY LOADS
-            generalWasteFuncFull()
-            
+                function glassFunc() {
+                    var marker, i;
+                    for (i = 0; i < countGlass; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(glassGeo[i][0], glassGeo[i][1]),
+                        map: map,
+                        icon: glassPic
+                      });
+                    }
+                }
+                
+                function batteriesFunc() {
+                    var marker, i;
+                    for (i = 0; i < countBatteries; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(batteriesGeo[i][0], batteriesGeo[i][1]),
+                        map: map,
+                        icon: batteriesPic
+                      });
+                    }
+                }
+                
+                function charityFunc() {
+                    var marker, i;
+                    for (i = 0; i < countCharity; i++) {  
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(charityGeo[i][0], charityGeo[i][1]),
+                        map: map,
+                        icon: charityPic
+                      });
+                    }
+                }
+                
+            // RUN THE FUNCTIONS FOR GEOLOCATION
+            generalWasteFunc();
             paperFunc();
-            
             pantFunc();
+            glassFunc();
+            batteriesFunc();
+            charityFunc();
+            
 
 
             //--------------------------------------------------------
