@@ -79,26 +79,30 @@
             <h4>Remember to take the trash can out - sign up to get a reminder!</h4>
             <form role="form">
                 <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email">
+                    <label for="sub_email">Email address:</label>
+                    <input type="email" class="form-control" id="sub_email">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Street:</label>
-                    <input type="text" class="form-control" id="pwd">
+                    <label for="sub_street">Street:</label>
+                    <input type="text" class="form-control" id="sub_street">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Zipcode:</label>
-                    <input type="number" class="form-control" id="pwd">
+                    <label for="sub_zipcode">Zipcode:</label>
+                    <input type="number" class="form-control" id="sub_zipcode">
                 </div>
                 <div class="form-group">
-                    <label for="sel1">Notification type:</label>
-                    <select class="form-control" id="sel1">
+                    <label for="sub_mobile">Mobile:</label>
+                    <input type="number" class="form-control" id="sub_mobile">
+                </div>
+                <div class="form-group">
+                    <label for="sub_notify">Notification type:</label>
+                    <select class="form-control" id="sub_notify">
                         <option value="email">E-mail</option>
                         <option value="mobile">Mobile</option>
                         <option value="all">Both</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success container-fluid-full btn-lg">Submit</button>
+                <a class="btn btn-success container-fluid-full btn-lg" id="sub_btn">Subscribe now!</a>
             </form>
         </div>
     </div>
@@ -149,17 +153,14 @@
 
 
 
+        /**********************
+         * SUBSCRIBE
+         **********************/
 
-
-
-
-
-
-
-
+        $("#btn-unsubscribe-open").click(function () {
 
         $.ajax({
-            url: '/news/create',
+            url: '/subscribe',
             type: 'post',
             data: {
                 title: title,
@@ -178,6 +179,7 @@
                 var error = JSON.parse(data.responseText);
                 console.log(error);
             }
+        }
     });
 </script>
 </body>
