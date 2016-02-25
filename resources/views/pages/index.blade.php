@@ -3,7 +3,7 @@
     <head>
         <title>Trash And Charity</title>
 
-        <link rel="stylesheet" type="text/css" href="C:\wamp\www\hackathon-backup240216 (1)\hackathon\public\css\style.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <meta charset="utf-8">
         
