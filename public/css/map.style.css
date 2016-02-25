@@ -39,5 +39,7 @@ button img {
 }
 
 button p {
-    font-family: abel;
+    font-family: 'Abel', sans-serif;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Abel);

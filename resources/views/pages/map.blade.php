@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <title>Trash And Charity</title>
+        
+        
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="/css/map.style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
