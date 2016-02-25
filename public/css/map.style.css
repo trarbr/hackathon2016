@@ -32,6 +32,9 @@ button {
     border: none;
     padding: 0px 10px 0px 0px;
 }
+    button:hover { 
+        background-color: rgba(150, 204, 0, 1);
+    }
 
 button img {
     height: 35px;
