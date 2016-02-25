@@ -1,4 +1,4 @@
-             html, body {
+            html, body {
                 height: 100%;
             }
 
@@ -11,15 +11,56 @@
                 font-family: 'Lato';
             }
 
-			#header {
+			.menulinkstyle {
+				padding-top: 4px;
+				}
 				
+			#header {				
 				height: 90px;
-				width: 80%;
+				width: 100%;
 				display: block;
 				margin-left: auto;
   				margin-right: auto;
+				background-color: #0761a3;
+				}
+			
+			nav {
+				margin-right: 140px;
+				padding-top: 64px;
+				}
+			
+			nav ul li {
+				height: 30px;
+				width: 100px;	
+				margin-right: 10px;
+				
+				z-index: 2;
+				text-align: center;
+				display: inline-block;
+				}
+			
+			ul {
+				list-style-type: none;
+				
+				} 
+			
+			li a {
+    			display: block;
+				}
+			
+			.background-yellow {
+				background-color: #e2dd1a;	
 				}
 				
+			
+			.background-blue {
+				background-color: #1f2d60;
+				}
+			
+			.background-green {
+				background-color: #99cc02;
+				}
+						
             .container {
                 width: 80%;				
 				margin-left: auto;
@@ -27,29 +68,107 @@
 				display: block;
             	}
 			
+			#search {
+				float: right;
+				margin-top: -50px;
+				}
+			
+			#uppertext {
+				
+				font-size: 1.8em;
+				width:43%;
+				padding-top:15.5px;
+				float:left;
+				
+				}
+				
+			#lowertext {
+				font-size: 2.45em;
+				margin-top: -39px;
+				width:100%;
+				float:left;
+				margin-bottom:10px;
+							
+				}
+				
+				h2 {
+				width:57%;
+				float:right;
+				font-size:2.5em;
+			 	text-align:right;
+			
+				}
+			
+			.form {
+				margin-left: 20px;	
+				}
+			
+			.notifications {
+				
+				}
+			
+			.notification-1 {
+				width: 30%;
+				margin-left: 20px;
+				float: left;
+				
+				}
+			#submit{
+				
+				background-color:#e2dd1a;
+				border:none;
+				color:white;
+				width:100%;
+				height:40px;
+				margin-top:16px;
+				font-size:1.8em;
+				
+				}
+				
+			.notification-2 {
+				width: 50%;
+				float: left;
+				
+				}	
+			
 			.logo {
 				height: 80px;
 				width: 80px;
-				
-				margin-right: 10px;
-				margin-top: 10px;
-				background-color:#0E6010;
+				float: left;
+				margin-left: 120px;
+				padding-top: 10px;				
 				text-align:center;
 				color: #FFFFFF;		
+				}
+			
+			.menulinkstyle {
+				text-decoration: none;	
 				}
 				
 			.map {
 				width: 100%;
-				height: 200px;
-				background-color: #1383aF; /*test */
+				height: 300px;
+				background-color: #1383aF;
 				color: #FFFFFF;
-				
+				float:left;
+				display: block;
 				}
 				
+				#googleMap{					
+					width:100%;
+					height:300px;
+					float:left;
+					
+					}
+				#content{
+					float:left;
+					width:100%;
+					margin-top:6px;
+					}
 			.video {
 				width: 59%;
-				height: 200px;
-				background-color: #215C27;
+				height: 300px;
+				margin-bottom: 10px;
 				float:left;
 				color: #FFFFFF;
 				}	
@@ -57,16 +176,17 @@
 			.signup {
 				width: 40%;
 				height: 200px;
-				background-color: #0D5519;
 				float:right;
-				color: #FFFFFF;
+				color: black;
 				}
+			
+			 
 			
 			.news {
 				width: 100%;
-				margin-top: 
+				margin-top: 0px; 
 				height: 200px;
-				background-color: #07430C;
+				border: 1px solid #0E7E17;
 				float:left;
 				
 				color: #FFFFFF;
