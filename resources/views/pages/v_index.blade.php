@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Trash & Charity</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
     <link rel="stylesheet" href="/css/v_style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -60,10 +59,7 @@
 
 <div class="container-fluid-full">
         <div id="map">
-
         </div>
-
-
         <div id="mapnavcont">
             <form action="#">
                 Street
@@ -74,72 +70,72 @@
             <ul>
                 <li>
                     <button id="generalWaste" onclick="mdamGenWaste()">
-                        <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
+                        <img src="/images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
                         <p>general Waste </p>
                     </button>
                     <button id="generalWaste2" onclick="mdamGenWaste2()">
-                        <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
+                        <img src="/images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
                         <p>general Waste </p>
                     </button>
                 </li>
                 <li>
                     <button id="paper" onclick="mdamPaper()">
-                        <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
+                        <img src="/images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
                         <p>paper</p>
                     </button>
                     <button id="paper2" onclick="mdamPaper2()">
-                        <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
+                        <img src="/images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
                         <p>paper</p>
                     </button>
                 </li>
                 <li>
                     <button id="pant" onclick="mdamPant()">
-                        <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
+                        <img src="/images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
                         <p>pant</p>
                     </button>
                     <button id="pant2" onclick="mdamPant2()">
-                        <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
+                        <img src="/images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
                         <p>pant</p>
                     </button>
                 </li>
                 <li>
                     <button id="glass" onclick="mdamGlass()">
-                        <img src="images/glass.png" alt="On/off Glass">
+                        <img src="/images/glass.png" alt="On/off Glass">
                         <p>glass</p>
                     </button>
                     <button id="glass2" onclick="mdamGlass2()">
-                        <img src="images/glass.png" alt="On/off Glass">
+                        <img src="/images/glass.png" alt="On/off Glass">
                         <p>glass</p>
                     </button>
                 </li>
                 <li>
                     <button id="batteries" onclick="mdamBatteries()">
-                        <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
+                        <img src="/images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
                         <p>batteries</p>
                     </button>
                     <button id="batteries2" onclick="mdamBatteries2()">
-                        <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
+                        <img src="/images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
                         <p>batteries</p>
                     </button>
                 </li>
                 <li>
                     <button id="charity" onclick="mdamCharity()">
-                        <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
+                        <img src="/images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
                         <p>charity</p>
                     </button>
                     <button id="charity2" onclick="mdamCharity2()">
-                        <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
+                        <img src="/images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
                         <p>charity</p>
                     </button>
                 </li>
 
                 <li>
                     <button id="sechand" onclick="mdamSechand()">
-                        <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
+                        <img src="/images/2handstore.png" alt="On/off 2. Hand Stores">
                         <p>2. hand stores</p>
                     </button>
                     <button id="sechand2" onclick="mdamSechand2()">
-                        <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
+                        <img src="/images/2handstore.png" alt="On/off 2. Hand Stores">
                         <p>2. hand stores</p>
                     </button>
                 </li>
@@ -156,13 +152,13 @@
             $("#sechand2").hide();
 
             //Pictures
-            var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
-            var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png';
-            var charityPic = 'images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
-            var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
-            var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
-            var glassPic = 'images/glass_resized.png';
-            var sechandPic = 'images/2handstore_resized.png';
+            var generalWastePic = '/images/trash-glyph-icon_fy3MDpLO_L_resized.png';
+            var paperPic = '/images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png';
+            var charityPic = '/images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
+            var batteriesPic = '/images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
+            var pantPic = '/images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
+            var glassPic = '/images/glass_resized.png';
+            var sechandPic = '/images/2handstore_resized.png';
 
             // VARIABLES CONTAINING THE GEO LOCATIONS
             var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
