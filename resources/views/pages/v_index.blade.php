@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Trash & Charity</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -72,54 +72,123 @@
 <div class="newsletter">
     <div class="container">
         <div class="col-xs-12 col-md-6">
-            <img src="http://www.slate.com/content/dam/slate/articles/health_and_science/science/2015/07/150730_SCI_Cecil_lion.jpg.CROP.promo-xlarge2.jpg"
+            <img src="/images/recycle.png"
                  class="img-responsive"/>
         </div>
         <div class="col-xs-12 col-md-6">
             <h4>Remember to take the trash can out - sign up to get a reminder!</h4>
-            <form role="form">
+
+            <strong id="sub_msg" class="hidden">You have now subscribed!</strong>
+            <form role="form" id="sub_form">
                 <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email">
+                    <label for="sub_email">Email address:</label>
+                    <input type="email" class="form-control" id="sub_email">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Street:</label>
-                    <input type="text" class="form-control" id="pwd">
+                    <label for="sub_mobile">Mobile:</label>
+                    <input type="number" class="form-control" id="sub_mobile">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Zipcode:</label>
-                    <input type="number" class="form-control" id="pwd">
+                    <label for="sub_street">Street:</label>
+                    <input type="text" class="form-control" id="sub_street">
                 </div>
                 <div class="form-group">
-                    <label for="sel1">Notification type:</label>
-                    <select class="form-control" id="sel1">
+                    <label for="sub_zipcode">Zipcode:</label>
+                    <input type="number" class="form-control" id="sub_zipcode">
+                </div>
+                <div class="form-group">
+                    <label for="sub_notify">Notification type:</label>
+                    <select class="form-control" id="sub_notify">
                         <option value="email">E-mail</option>
                         <option value="mobile">Mobile</option>
                         <option value="all">Both</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success container-fluid-full">Submit</button>
+                <a class="btn btn-success container-fluid-full btn-lg" id="sub_btn">Subscribe now!</a>
             </form>
         </div>
     </div>
 </div>
 
+<footer>
+    <div class="container text-center" id="unsubscribe-hidden">
+        <p id="unsubscribe-msg"></p>
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+        <form role="form" class="form-inline">
+            <div class="form-group">
+                <input type="text" placeholder="Your e-mail" class="form-control" id="btn-unsubscribe-field">
+                <a class="btn btn-success btn-sm" id="btn-unsubscribe-go">Unsubscribe</a>
+            </div>
+        </form>
+        <br/><br/>
+    </div>
+    <div class="container text-center">
+        &copy; <?php echo date('Y'); ?> Copyright Trash & Charity
+        <a class="btn btn-info btn-xs pull-right" id="btn-unsubscribe-open">Unsubscribe</a>
+    </div>
+</footer>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
+
+<script type="text/javascript">
+    $(function ($) {
+
+        $("#unsubscribe-hidden").toggle('hidden');
+
+        /**********************
+         * UNSUBSCRIBE
+         **********************/
+
+        $("#btn-unsubscribe-open").click(function () {
+            $("#unsubscribe-hidden").toggle('hidden');
+
+            $("#btn-unsubscribe-go").click(function () {
+                var email = $("#btn-unsubscribe-field").val();
+                $.get("unsubscribe/" + email, function (data) {
+                    $("#btn-unsubscribe-field").val("");
+                    $("#unsubscribe-msg").html("You have now unsubscribed!");
+                });
+            });
+        });
+
+        /**********************
+         * SUBSCRIBE
+         **********************/
+
+        $("#sub_btn").click(function () {
+            var sub_email = $("#sub_email").val();
+            var sub_mobile = $("#sub_mobile").val();
+            var sub_street = $("#sub_street").val();
+            var sub_zipcode = $("#sub_zipcode").val();
+            var sub_notify = $("#sub_notify").val();
+            $.ajax({
+                url: '/subscribe',
+                type: 'post',
+                data: {
+                    email: sub_email,
+                    street: sub_street,
+                    zipcode: sub_zipcode,
+                    mobile: sub_mobile,
+                    notification_type: sub_notify
+                },
+                success: function (data) {
+                    console.log(data);
+                    if(data == "ok") {
+
+                    }
+
+                    $('#sub_form').slideUp(500);
+                    $('#sub_msg').removeClass('hidden');
+                }, error: function (data) {
+                    var error = JSON.parse(data.responseText);
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
