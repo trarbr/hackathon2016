@@ -53,6 +53,12 @@
     padding: 18px 10px 18px 0px;
 }
 
+#logo {
+    width: 300px;
+    position: absolute;
+    top: 25px;
+}
+
 #mapnavcont button p {
     float: right;
     font-family: 'Abel', sans-serif;
@@ -89,11 +95,6 @@
 .navbar {
     margin-bottom: 0;
 }
-.navbar-default .navbar-brand {
-    font-size: 30px;
-    color: black;
-}
-
 .overlay {
     background:transparent;
     position:relative;
