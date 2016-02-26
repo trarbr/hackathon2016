@@ -60,6 +60,8 @@ class NewsletterController extends Controller
         $user->save();
 
         $this->send_notification($user->email, 'newsletter.subscribe_update');
+
+        return "ok";
     }
 
     private function send_notification($email, $view)

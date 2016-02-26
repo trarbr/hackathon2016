@@ -1,8 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+#map {
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+}
+
+#mapnavcont {
+    position: relative;
+    width: 100%;
+    height: 73px;
+    background-color: rgba(150, 204, 0, 0.7);
+    margin-top: -73px;
+    z-index: 1;
+}
+
+#mapnavcont ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mapnavcont li {
+    float: right;
+}
+
+#mapnavcont a {
+    display: block;
+    padding: 8px;
+}
+
+#mapnavcont button {
+    background-color: transparent;
+    border: none;
+    padding: 0px 10px 0px 0px;
+}
+#mapnavcont button:hover {
+    background-color: rgba(150, 204, 0, 1);
+}
+
+#mapnavcont button img {
+    height: 35px;
+    width: auto;
+    padding: 18px 10px 18px 0px;
+}
+
+#mapnavcont button p {
+    float: right;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    padding-right: 8px;
+    margin-top: 36px;
+}
+
+#mapnavcont form {
+    font-family: 'Abel', sans-serif;
+    float: left;
+    font-size: 25px;
+    margin: 18px 10px 10px 10px;
+}
+
+#mapnavcont input {
+    border: none;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    color: #999999;
+    padding-top: 14px;
+}
+
 
 .bg-blue {
     background: lightblue;
@@ -12,6 +85,9 @@
     background: #5bc0de;
     height: 130px;
     padding-top: 40px;
+}
+.navbar {
+    margin-bottom: 0;
 }
 .navbar-default .navbar-brand {
     font-size: 30px;

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/v_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 <body>
 
@@ -22,7 +25,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="/">Trash & Charity</a>
+            <a class="navbar-brand" href="/">Trash & Charity - Make a choice!</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav pull-right">
@@ -34,6 +37,7 @@
     </div><!--/.container-fluid -->
 </nav>
 
+<!--
 <div class="welcome">
     <div class="container">
         <div class="col-xs-12 col-md-6 ">
@@ -52,32 +56,437 @@
         </div>
     </div>
 </div>
+-->
 
 <div class="container-fluid-full">
-    <div class="overlay" onClick="style.pointerEvents='none'"></div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9066.003514821652!2d10.44158445!3d55.38416615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sda!2sus!4v1456397385221"
-            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-<div class="maps-button">
-    <div class="container">
-        <form class="form-inline text-center">
-            <input type="submit" class="btn btn-info btn-map" value="Click me"/>
-            <input type="submit" class="btn btn-danger btn-map" value="Click me"/>
-            <input type="submit" class="btn btn-warning btn-map" value="Click me"/>
-            <input type="submit" class="btn btn-info btn-map" value="Click me"/>
-        </form>
-    </div>
+        <div id="map">
+
+        </div>
+
+
+        <div id="mapnavcont">
+            <form action="#">
+                Street
+                <input type="search" name="address" placeholder="name of the street...">
+            </form>
+
+
+            <ul>
+                <li>
+                    <button id="generalWaste" onclick="mdamGenWaste()">
+                        <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
+                        <p>general Waste </p>
+                    </button>
+                    <button id="generalWaste2" onclick="mdamGenWaste2()">
+                        <img src="images/trash-glyph-icon_fy3MDpLO_L.png" alt="On/off General Waste">
+                        <p>general Waste </p>
+                    </button>
+                </li>
+                <li>
+                    <button id="paper" onclick="mdamPaper()">
+                        <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
+                        <p>paper</p>
+                    </button>
+                    <button id="paper2" onclick="mdamPaper2()">
+                        <img src="images/paper-airplane-stroke-icon_f13_S8Ud_L.png" alt="On/off Paper">
+                        <p>paper</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="pant" onclick="mdamPant()">
+                        <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
+                        <p>pant</p>
+                    </button>
+                    <button id="pant2" onclick="mdamPant2()">
+                        <img src="images/bottle-glyph-icon_fyhAh3Lu_L.png" alt="On/off Pant">
+                        <p>pant</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="glass" onclick="mdamGlass()">
+                        <img src="images/glass.png" alt="On/off Glass">
+                        <p>glass</p>
+                    </button>
+                    <button id="glass2" onclick="mdamGlass2()">
+                        <img src="images/glass.png" alt="On/off Glass">
+                        <p>glass</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="batteries" onclick="mdamBatteries()">
+                        <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
+                        <p>batteries</p>
+                    </button>
+                    <button id="batteries2" onclick="mdamBatteries2()">
+                        <img src="images/battery-6-glyph-icon_GJEYn2UO_L.png" alt="On/off Batteries">
+                        <p>batteries</p>
+                    </button>
+                </li>
+                <li>
+                    <button id="charity" onclick="mdamCharity()">
+                        <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
+                        <p>charity</p>
+                    </button>
+                    <button id="charity2" onclick="mdamCharity2()">
+                        <img src="images/t-shirt-glyph-icon_zkE1v68u_L.png" alt="On/off Charity">
+                        <p>charity</p>
+                    </button>
+                </li>
+
+                <li>
+                    <button id="sechand" onclick="mdamSechand()">
+                        <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
+                        <p>2. hand stores</p>
+                    </button>
+                    <button id="sechand2" onclick="mdamSechand2()">
+                        <img src="images/2handstore.png" alt="On/off 2. Hand Stores">
+                        <p>2. hand stores</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            $("#generalWaste2").hide();
+            $("#paper2").hide();
+            $("#pant2").hide();
+            $("#glass2").hide();
+            $("#batteries2").hide();
+            $("#charity2").hide();
+            $("#sechand2").hide();
+
+            //Pictures
+            var generalWastePic = 'images/trash-glyph-icon_fy3MDpLO_L_resized.png';
+            var paperPic = 'images/paper-airplane-stroke-icon_f13_S8Ud_L_resized.png';
+            var charityPic = 'images/t-shirt-glyph-icon_zkE1v68u_L kopi_resized.png';
+            var batteriesPic = 'images/battery-6-glyph-icon_GJEYn2UO_L_resized.png';
+            var pantPic = 'images/bottle-glyph-icon_fyhAh3Lu_L_resized.png';
+            var glassPic = 'images/glass_resized.png';
+            var sechandPic = 'images/2handstore_resized.png';
+
+            // VARIABLES CONTAINING THE GEO LOCATIONS
+            var generalWasteGeo = [ ["55.402403", "10.385522"], ["55.389733", "10.363276"] ];
+            var paperGeo = [ ["55.395388", "10.402494"], ["55.410737", "10.399881"] ];
+            var pantGeo = [ ["55.397738", "10.392915"], ["55.422620", "10.360700"], ["55.398940", "10.383703"] ];
+            var glassGeo = [ ["55.407586", "10.361147"], ["55.386334", "10.417280"], ["55.388204", "10.436706"] ];
+            var batteriesGeo = [ ["55.406373", "10.395450"], ["55.401182", "10.351430"] ];
+            var charityGeo = [ ["55.406611", "10.396681"], ["55.406416", "10.437536"], ["55.395694", "10.354624"] ];
+            var sechandGeo = [ ["55.403285", "10.371147"], ["55.395658", "10.398721"] ];
+
+
+            var countPaper = paperGeo.length;
+            var countGenWaste = generalWasteGeo.length;
+            var countPant = pantGeo.length;
+            var countGlass = glassGeo.length;
+            var countBatteries = batteriesGeo.length;
+            var countCharity = charityGeo.length;
+            var countSechand = sechandGeo.length;
+
+
+            var map;
+            /* SNAK MED VIGAN OM DET HER!!
+             function mdamSechand3() {
+             sechandGeo = [];
+             initMap();
+             $("#sechand").hide();
+             $("#sechand2").show();
+             }
+
+             function mdamSechand4() {
+             sechandGeo = [ ["55.403285", "10.371147"], ["55.395658", "10.398721"] ];
+             initMap();
+             $("#sechand").show();
+             $("#sechand2").hide();
+             } */
+
+
+
+            function mdamSechand() {
+                countSechand = 0;
+                initMap();
+                $("#sechand").hide();
+                $("#sechand2").show();
+            }
+
+            function mdamSechand2() {
+                countSechand = sechandGeo.length;
+                initMap();
+                $("#sechand").show();
+                $("#sechand2").hide();
+            }
+
+            function mdamCharity() {
+                countCharity = 0;
+                initMap();
+                $("#charity").hide();
+                $("#charity2").show();
+            }
+
+            function mdamCharity2() {
+                countCharity = charityGeo.length;
+                initMap();
+                $("#charity").show();
+                $("#charity2").hide();
+            }
+
+            function mdamBatteries() {
+                countBatteries = 0;
+                initMap();
+                $("#batteries").hide();
+                $("#batteries2").show();
+            }
+
+            function mdamBatteries2() {
+                countBatteries = batteriesGeo.length;
+                initMap();
+                $("#batteries").show();
+                $("#batteries2").hide();
+            }
+
+            function mdamGlass() {
+                countGlass = 0;
+                initMap();
+                $("#glass").hide();
+                $("#glass2").show();
+            }
+
+            function mdamGlass2() {
+                countGlass = glassGeo.length;
+                initMap();
+                $("#glass").show();
+                $("#glass2").hide();
+            }
+
+            function mdamGenWaste() {
+                countGenWaste = 0;
+                initMap();
+                $("#generalWaste").hide();
+                $("#generalWaste2").show();
+            }
+
+            function mdamGenWaste2() {
+                countGenWaste = generalWasteGeo.length;
+                initMap();
+                $("#generalWaste").show();
+                $("#generalWaste2").hide();
+            }
+
+            function mdamPaper() {
+                countPaper = 0;
+                initMap();
+                $("#paper").hide();
+                $("#paper2").show();
+            }
+
+            function mdamPaper2() {
+                countPaper = paperGeo.length;
+                initMap();
+                $("#paper").show();
+                $("#paper2").hide();
+            }
+
+
+            function mdamPant() {
+                countPant = 0;
+                initMap();
+                $("#pant").hide();
+                $("#pant2").show();
+            }
+
+            function mdamPant2() {
+                countPant = pantGeo.length;
+                initMap();
+                $("#pant").show();
+                $("#pant2").hide();
+            }
+
+
+            // INFOWINDOW Text
+            var contentString1 = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Uluru1</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>Blah blah blah </p>'+
+                    '</div>'+
+                    '</div>';
+
+            var contentString2 = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Uluru2</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>Blah blah blah </p>'+
+                    '</div>'+
+                    '</div>';
+
+
+            function initMap() {
+
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 55.402403, lng: 10.385522},
+                    scrollwheel: false,
+                    streetViewControl: false,
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.RIGHT_TOP
+                    },
+                    zoom: 13
+
+                });
+
+                function generalWasteFunc() {
+                    var marker, i;
+                    for (i = 0; i < countGenWaste; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(generalWasteGeo[i][0], generalWasteGeo[i][1]),
+                            map: map,
+                            icon: generalWastePic
+                        });
+                    }
+                }
+
+                function paperFunc() {
+                    var marker, i;
+                    for (i = 0; i < countPaper; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(paperGeo[i][0], paperGeo[i][1]),
+                            map: map,
+                            icon: paperPic
+                        });
+                    }
+                }
+
+                function pantFunc() {
+                    var marker, i;
+                    for (i = 0; i < countPant; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(pantGeo[i][0], pantGeo[i][1]),
+                            map: map,
+                            icon: pantPic
+                        });
+                    }
+                }
+
+                function glassFunc() {
+                    var marker, i;
+                    for (i = 0; i < countGlass; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(glassGeo[i][0], glassGeo[i][1]),
+                            map: map,
+                            icon: glassPic
+                        });
+                    }
+                }
+
+                function batteriesFunc() {
+                    var marker, i;
+                    for (i = 0; i < countBatteries; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(batteriesGeo[i][0], batteriesGeo[i][1]),
+                            map: map,
+                            icon: batteriesPic
+                        });
+                    }
+                }
+
+                function charityFunc() {
+                    var marker, i;
+                    for (i = 0; i < countCharity; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(charityGeo[i][0], charityGeo[i][1]),
+                            map: map,
+                            icon: charityPic
+                        });
+                    }
+                }
+
+
+                function sechandFunc() {
+                    var marker, i;
+                    for (i = 0; i < countSechand; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(sechandGeo[i][0], sechandGeo[i][1]),
+                            map: map,
+                            icon: sechandPic
+                        });
+                    }
+                }
+
+
+                //INFO WINDOW CONTENT TO CONTENSTRING
+                var infowindow1 = new google.maps.InfoWindow({
+                    content: contentString1
+                });
+
+                var infowindow2 = new google.maps.InfoWindow({
+                    content: contentString2
+                });
+
+
+                function sechandFunc1() {
+                    function adress1() {
+
+                        marker1 = new google.maps.Marker({
+                            position: new google.maps.LatLng(sechandGeo[0][0], sechandGeo[0][1]),
+                            map: map,
+                            icon: sechandPic
+                        });
+                        marker1.addListener('click', function() {
+                            infowindow1.open(map, marker1);
+                        });
+                    }
+
+
+
+                    function adress2() {
+
+                        marker2 = new google.maps.Marker({
+                            position: new google.maps.LatLng(sechandGeo[1][0], sechandGeo[1][1]),
+                            map: map,
+                            icon: sechandPic
+                        });
+                        marker2.addListener('click', function() {
+                            infowindow2.open(map, marker2);
+                        });
+                    }
+                    adress1();
+                    adress2();
+                }
+
+
+                // RUN THE FUNCTIONS FOR GEOLOCATION
+                generalWasteFunc();
+                paperFunc();
+                pantFunc();
+                glassFunc();
+                batteriesFunc();
+                charityFunc();
+                sechandFunc();
+                //sechandFunc1();
+
+            }
+
+
+        </script>
+
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOgNgm0F35m5uI_elKUjTAWpHVaFHb_KA&callback=initMap">
+        </script>
 </div>
 
 <div class="newsletter">
     <div class="container">
         <div class="col-xs-12 col-md-6">
-            <img src="/images/recycle.png"
-                 class="img-responsive"/>
+            <h2>Remember to take the trash can out <br /> <span class="bg-blue">- sign up to get a reminder!</span></h2>
+            <br />
+            <video width="100%" height="100%" controls>
+                <source src="/video/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
         </div>
         <div class="col-xs-12 col-md-6">
-            <h4>Remember to take the trash can out - sign up to get a reminder!</h4>
-
             <strong id="sub_msg" class="hidden">You have now subscribed!</strong>
             <form role="form" id="sub_form">
                 <div class="form-group">
@@ -175,16 +584,16 @@
                     notification_type: sub_notify
                 },
                 success: function (data) {
-                    console.log(data);
                     if(data == "ok") {
-
+                        $('#sub_form').slideUp(500);
+                        $('#sub_msg').removeClass('hidden');
+                    } else {
+                        console.log("Røget ind i success men stadig fejl: " + data);
+                        alert("FEJL!");
                     }
-
-                    $('#sub_form').slideUp(500);
-                    $('#sub_msg').removeClass('hidden');
                 }, error: function (data) {
-                    var error = JSON.parse(data.responseText);
-                    console.log(error);
+                    console.log("Error: " + data);
+                    alert("FEJL!");
                 }
             });
         });
